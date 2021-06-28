@@ -1,0 +1,108 @@
+*, 
+*::before, 
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+:root {
+  font-size: 62.5%;
+  height: 100%;
+  width: 100%;
+
+  /* custom properties */
+  /* main color  */
+  --primary-color: #014d4e;
+
+  /* secondary color */
+  --secondary-color: #ff9408;
+
+  /* secondary color modified  */
+  --secondary-color-m: #ff94088e;
+
+  /* tertiary color  */
+  --tertiary-color: #017374;
+
+  /* teriary color modified  */
+  --tertiary-color-m: #01727498;
+
+}
+
+body {
+  font-family: 'Baloo Tamma 2', cursive;
+  line-height: 1.8;
+
+  display: flex;
+}
+
+#side-nav {
+  position: sticky;
+  top: 0;
+  left: 0; 
+  height: 100vh;
+  width: calc(3vw + 3vh);
+  margin: 0px;
+}
+
+.side-nav-content{
+  height: 100%;
+  width: calc(3vw + 3vh);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-color: var(--primary-color);
+}
+
+.side-nav-content--logo img {
+  width: calc(3vw + 3vh);
+  object-fit: cover;
+}
+
+.side-nav-content--social {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.side-nav-content--social a {
+  font-size: calc(1rem + 1.06667vw);
+  padding-bottom: calc(5rem + 1.06667vw);
+
+  color: white;
+
+  transition: color 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55) 
+}
+
+
+.side-nav-content--social a i:hover, 
+.side-nav-content--social a i:active {
+  color: var(--secondary-color)
+}
+
+
+/*********** Main content  *************/
+main {
+  flex: 1;
+}
+
+/********** Main Nav Header  **********/
+#header {
+  background-color: var(--secondary-color);
+  height: calc(3vw + 3vh);
+  width: calc(100vw - (3vw + 3vh));
+  
+  z-index: 2;
+  align-self: flex-end;
+}
+
+#header-main-nav {
+  display: flex;
+  flex-direction: row;
+}
+
