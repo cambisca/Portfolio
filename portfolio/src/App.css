@@ -163,17 +163,19 @@ main {
  background-color: white;
 
  transform: scaleX(0);
+ transition: transform 0.6s cubic-bezier(1, 0, 0, 1);
 }
 
 .header-main-nav-links li a:link::before, 
 .header-main-nav-links li a:visited::before {
   top: 0;
-
+  transform-origin: left;
 }
 
 .header-main-nav-links li a:link::after, 
 .header-main-nav-links li a:visited::after {
   bottom: 0;
+  transform-origin: right;
 }
 
 .header-main-nav-links li a:hover::before, 
