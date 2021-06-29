@@ -14,20 +14,44 @@
 
   /* custom properties */
   /* main color  */
-  --primary-color: #014d4e;
+  /* --primary-color: #014d4e; */
+  --primary-color: #00173d;
 
   /* secondary color */
-  --secondary-color: #ff9408;
+  /* --secondary-color: #ff9408; */
+  --secondary-color: #e04802;
+ 
 
   /* secondary color modified  */
-  --secondary-color-m: #ff94088e;
+  /* --secondary-color-m: #ff94088e; */
+  --secondary-color-m: #a13300;
 
   /* tertiary color  */
-  --tertiary-color: #017374;
+  /* --tertiary-color: #017374; */
+  --tertiary-color: #cfcfcf;
 
   /* teriary color modified  */
-  --tertiary-color-m: #01727498;
+  /* --tertiary-color-m: #01727498; */
+  --tertiary-color-m: #a5a5a598;
 
+}
+
+li {
+  list-style: none;
+}
+
+a:link, 
+a:visited {
+  text-decoration: none;
+  color: white; 
+  font-size: 1.5rem;
+}
+
+
+
+#App {
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 body {
@@ -39,11 +63,12 @@ body {
 
 #side-nav {
   position: sticky;
+  display: flex;
   top: 0;
   left: 0; 
   height: 100vh;
   width: calc(3vw + 3vh);
-  margin: 0px;
+  margin: 0;
 }
 
 .side-nav-content{
@@ -98,11 +123,62 @@ main {
   width: calc(100vw - (3vw + 3vh));
   
   z-index: 2;
-  align-self: flex-end;
 }
 
 #header-main-nav {
   display: flex;
   flex-direction: row;
+  align-content: center;
+  height: 100%;
 }
 
+.header-main-nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+
+.header-main-nav-links li {
+  padding-right: 3vw;
+
+}
+
+.header-main-nav-links li a {
+  position: relative;
+  padding: 0.2rem 0.6rem;
+  font-size: calc(1rem+ 1.6667vw)
+}
+
+.header-main-nav-links li a:link::before, 
+.header-main-nav-links li a:visited::before,
+.header-main-nav-links li a:link::after, 
+.header-main-nav-links li a:visited::after {
+ content: '';
+ position: absolute; 
+ left: 0;
+ width: 100%;
+ height: 0.25rem;
+ background-color: white;
+
+ transform: scaleX(0);
+}
+
+.header-main-nav-links li a:link::before, 
+.header-main-nav-links li a:visited::before {
+  top: 0;
+
+}
+
+.header-main-nav-links li a:link::after, 
+.header-main-nav-links li a:visited::after {
+  bottom: 0;
+}
+
+.header-main-nav-links li a:hover::before, 
+.header-main-nav-links li a:active::before,
+.header-main-nav-links li a:hover::after, 
+.header-main-nav-links li a:active::after {
+  transform: scaleX(1);
+}

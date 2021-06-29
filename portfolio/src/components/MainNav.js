@@ -4,7 +4,7 @@ function MainNav(){
     return (
         <main>
             <header id="header">
-                {/* <nav id='header-main-nav'>
+                <nav id='header-main-nav'>
                     <div class="header-main-nav--hamburger">
                         <div class="line line-1"></div>
                         <div class="line line-2"></div>
@@ -18,7 +18,7 @@ function MainNav(){
                         <li><a href="#">Hire Me</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
-                </nav>  */}
+                </nav>
             </header>
         </main>
     )
