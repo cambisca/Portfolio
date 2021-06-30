@@ -7,16 +7,22 @@ function MainNav(){
     function hamburgerMenuClick(e){
         if (e.target.parentNode.id) {
             e.target.parentNode.classList.toggle('clicked')
-        }
-        console.log(e.target.parentNode.id, e.target.parentNode.classList.value)
-    }
-
-    function hamburgerLineClick(e){
-        if (e.target.parentNode.parentNode.id) {
+        } else if (e.target.parentNode.parentNode.id) {
             e.target.parentNode.parentNode.classList.toggle('clicked')
         }
-        console.log(e.target.parentNode.parentNode)
+
+        console.log(e.target.parentNode.childNodes)
+        // links.forEach((link) => {
+
+        // })
     }
+
+    // function hamburgerLineClick(e){
+    //     if (e.target.parentNode.parentNode.id) {
+    //         e.target.parentNode.parentNode.classList.toggle('clicked')
+    //     }
+    //     console.log(e.target.parentNode.parentNode)
+    // }
 
     // let hamburgerClass;
     // if (hamburgerMenu) {
@@ -30,9 +36,9 @@ function MainNav(){
             <header id="header">
                 <nav id='header-main-nav'>
                     <div class="header-main-nav--hamburger" onClick={hamburgerMenuClick}>
-                        <div class="line line-1" onClick={hamburgerLineClick}></div>
-                        <div class="line line-2" onClick={hamburgerLineClick}></div>
-                        <div class="line line-3" onClick={hamburgerLineClick}></div>
+                        <div class="line line-1" onClick={hamburgerMenuClick}></div>
+                        <div class="line line-2" onClick={hamburgerMenuClick}></div>
+                        <div class="line line-3" onClick={hamburgerMenuClick}></div>
                     </div> 
                      
                     <ul class="header-main-nav-links">
