@@ -7,38 +7,31 @@ function MainNav(){
     function hamburgerMenuClick(e){
         if (e.target.parentNode.id) {
             e.target.parentNode.classList.toggle('clicked')
+            e.target.parentNode.childNodes[1].childNodes.forEach((link) => {
+                link.classList.toggle('fade')
+            })
+            console.log(e.target.parentNode.childNodes[1].childNodes)
         } else if (e.target.parentNode.parentNode.id) {
             e.target.parentNode.parentNode.classList.toggle('clicked')
-        }
+            e.target.parentNode.parentNode.childNodes[1].childNodes.forEach((link) => {
+                link.classList.toggle('.fade')
+            })
+            console.log(e.target.parentNode.parentNode.childNodes[1].childNodes[0])
+        } 
+        
 
-        console.log(e.target.parentNode.childNodes)
-        // links.forEach((link) => {
-
-        // })
     }
 
-    // function hamburgerLineClick(e){
-    //     if (e.target.parentNode.parentNode.id) {
-    //         e.target.parentNode.parentNode.classList.toggle('clicked')
-    //     }
-    //     console.log(e.target.parentNode.parentNode)
-    // }
-
-    // let hamburgerClass;
-    // if (hamburgerMenu) {
-    //     let hamburgerClass = 'clicked'
-    // } else {
-    //     let hamburgerClass = 'header-main-nav'
-    // }
+    
 
     return (
         <main>
             <header id="header">
                 <nav id='header-main-nav'>
                     <div class="header-main-nav--hamburger" onClick={hamburgerMenuClick}>
-                        <div class="line line-1" onClick={hamburgerMenuClick}></div>
-                        <div class="line line-2" onClick={hamburgerMenuClick}></div>
-                        <div class="line line-3" onClick={hamburgerMenuClick}></div>
+                        <div class="line line-1" ></div>
+                        <div class="line line-2" ></div>
+                        <div class="line line-3" ></div>
                     </div> 
                      
                     <ul class="header-main-nav-links">
@@ -53,6 +46,15 @@ function MainNav(){
                     
                 </nav>
             </header>
+
+            <section id="showcase">
+                <div id="showcase__content">
+                    <h1 class="showcase__content--title"> Cameron Bisca </h1>
+                    <p class="showcase__content--para"> Full Stack Developer </p>
+                    <a href="#" class="showcase__content--link"> My Work </a>
+                </div>
+
+            </section>
         </main>
     )
 }
