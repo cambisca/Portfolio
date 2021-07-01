@@ -55,6 +55,32 @@ function MainNav(){
                 </div>
 
             </section>
+
+            <section id="projects">
+                <div class="project__card">
+                    <img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/03/07/11/brooklyn-manhattan-bridge.jpg?width=1200&auto=webp&quality=75" alt="poster" />
+                </div>
+
+                <div class="project__card">
+                    <img src="https://travelforlifenow.com/travelforlifenow.com/uploads/2019/07/Jefferson-St-Bushwick-June-2019-tny.jpg" alt="poster" />
+                </div>
+
+                <div class="project__card">
+                    <img src="https://patch.com/img/cdn20/users/22926829/20170623/095152/styles/raw/public/article_images/bed_stuy_kathleen_culliton-1498225756-7379.jpg" alt="poster" />
+                </div>
+
+                <div class="project__card">
+                    <img src="https://patch.com/img/cdn20/users/22926829/20170623/095152/styles/raw/public/article_images/bed_stuy_kathleen_culliton-1498225756-7379.jpg" alt="poster" />
+                </div>
+
+                <div class="project__card">
+                    <img src="https://patch.com/img/cdn20/users/22926829/20170623/095152/styles/raw/public/article_images/bed_stuy_kathleen_culliton-1498225756-7379.jpg" alt="poster" />
+                </div>
+
+                <div class="project__card">
+                    <img src="https://patch.com/img/cdn20/users/22926829/20170623/095152/styles/raw/public/article_images/bed_stuy_kathleen_culliton-1498225756-7379.jpg" alt="poster" />
+                </div>
+            </section>
         </main>
     )
 }
