@@ -40,8 +40,8 @@ function MainNav(){
                         <li><a href="#">About</a></li>
                         <li><a href="#">Projects</a></li>
                         <li><a href="#">Languages</a></li>
-                        <li><a href="#">Hire Me</a></li>
                         <li><a href="#">Contact</a></li>
+                        <li><a class="resume-select" href="#"> Resume </a></li>
                     </ul>
                     
                     
@@ -124,6 +124,41 @@ function MainNav(){
 
                 <div class="lang-card lang-5">
                     <img src="https://allvectorlogo.com/img/2016/04/css3-logo.png" alt="CSS"/>
+                </div>
+            </section>
+            
+            <section id="testimonials">
+                <div class="testimonial-card">
+                    <div class="testimonial-card--img">
+                        <img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/03/07/11/brooklyn-manhattan-bridge.jpg?width=1200&auto=webp&quality=75" alt="I GOT NEXT" />
+                    </div>
+
+                    <div class="testimonial-card--content">
+                        <h3 class="testimonial-card-content--title"> I GOT NEXT </h3>
+                        <p class="testimonial-card-content--para"> Demo Netlify Github </p>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-card--img">
+                        <img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/03/07/11/brooklyn-manhattan-bridge.jpg?width=1200&auto=webp&quality=75" alt="Discourse" />
+                    </div>
+
+                    <div class="testimonial-card--content">
+                        <h3 class="testimonial-card-content--title"> DISCOURSE </h3>
+                        <p class="testimonial-card-content--para"> Demo Netlify Github </p>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-card--img">
+                        <img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/03/07/11/brooklyn-manhattan-bridge.jpg?width=1200&auto=webp&quality=75" alt="The Actors Studio" />
+                    </div>
+
+                    <div class="testimonial-card--content">
+                        <h3 class="testimonial-card-content--title"> THE ACTORS STUDIO</h3>
+                        <p class="testimonial-card-content--para"> Demo Netlify Github </p>
+                    </div>
                 </div>
             </section>
         </main>
