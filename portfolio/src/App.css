@@ -514,6 +514,45 @@ main {
   left: 1;
 }
 
+#contact {
+  height: 100vh;
+  background-image: url('images/IMG_0563.jpeg');
+  background-position: 95% 30%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.contact__form {
+  flex-basis: 40rem;
+
+  display: flex;
+  flex-direction: column;
+  background-color: var(--tertiary-color);
+}
+
+.contact__form input, 
+.contact__form textarea {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  padding: 2rem;
+  background: transparent;
+  border: none;
+  border-bottom: var( --secondary-color) solid 0.1rem;
+
+}
+
+.contact__form textarea {
+  height: 25vh;
+}
+
+input[type=submit] {
+  border: none;
+  cursor: pointer;
+}
+
+
 @media screen and (max-width: 900px) {
   #showcase {
     background-position: 100%;

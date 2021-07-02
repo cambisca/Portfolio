@@ -135,7 +135,11 @@ function MainNav(){
 
                     <div class="testimonial-card--content">
                         <h3 class="testimonial-card-content--title"> I GOT NEXT </h3>
-                        <p class="testimonial-card-content--para"> Demo Netlify Github </p>
+                        <div class="testimonial-card-content--links">
+                            <a href="#"> Demo </a>
+                            <a href="#"> Netlify </a>
+                            <a href="#"> Github </a>
+                        </div>
                     </div>
                 </div>
 
@@ -160,6 +164,20 @@ function MainNav(){
                         <p class="testimonial-card-content--para"> Demo Netlify Github </p>
                     </div>
                 </div>
+            </section>
+
+            <section id="contact">
+                <form class="contact__form">
+                    <input type="text" placeholder="Name" />
+                    
+                    <input type="email" placeholder="Email" />
+                    
+                    <input type="text" placeholder="Subject" />
+                    
+                    <textarea type="message" />
+                    
+                    <input type="submit" value="submit" />
+                </form>
             </section>
         </main>
     )
