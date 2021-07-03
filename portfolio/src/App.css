@@ -21,7 +21,8 @@
   /* secondary color */
   /* --secondary-color: #ff9408; */
   /* --secondary-color: #b5851d; */
-  --secondary-color: #abaeb9;
+  /* --secondary-color: #abaeb9; */
+  --secondary-color: #d6d6da;
 
   /* secondary color modified  */
   /* --secondary-color-m: #ff94088e; */
@@ -81,7 +82,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
 
-  background-color: var(--primary-color);
+  background-color: var(--tertiary-color);
 }
 
 .side-nav-content--logo {
@@ -90,6 +91,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: var(--tertiary-color);
 }
 
 .side-nav-content--logo img {
@@ -99,9 +101,11 @@ body {
 
 .logo {
   font-family: "Rock Salt";
+  /* color: var(--primary-color); */
   color: white;
   font-size: calc(1rem + 1.06667vw);
   border-bottom: white solid 3px;
+  padding: 0;
 }
 
 .side-nav-content--social {
@@ -135,11 +139,24 @@ main {
 
 /********** Main Nav Header  **********/
 #header {
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   height: calc(3vw + 3vh);
-  width: calc(100vw - (3vw + 3vh));
-  
+  /* width: calc(100vw - (3vw + 3vh)); */
+  top: 0;
+  position: sticky;
   z-index: 2;
+}
+
+.logo__div {
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.actual__logo {
+  color: white;
+  height: calc( 1rem + 3vh);
+  width: calc(1rem + 3vw);
 }
 
 #header-main-nav {
@@ -211,7 +228,7 @@ main {
 
 #showcase {
   height: 100vh;
-  background-image: url('images/IMG_0560.jpeg');
+  background-image: url('images/IMG_0563.jpeg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -222,7 +239,7 @@ main {
 }
 
 #showcase__content {
-  background-color: var(--secondary-color-m);
+  background-color: rgba(253, 252, 252, 0);
   padding: calc(1rem + 2vw);
   height: calc(5rem + 18vmax);
   /* margin-left: calc(2vw); */
@@ -313,7 +330,7 @@ main {
   flex-wrap: wrap;
   justify-content: center;
   padding: 2rem;
-  background-color: var(--secondary-color);
+  background-color: rgb(221, 221, 221);
 }
 
 .project__card {
@@ -341,7 +358,6 @@ main {
 
 #about-me {
   display: flex;
-  /* height: 75vh; */
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
@@ -529,6 +545,7 @@ main {
   display: flex;
   flex-direction: column;
   background-color: var(--tertiary-color);
+  opacity: .8;
 }
 
 .contact__form input, 

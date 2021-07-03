@@ -29,6 +29,10 @@ function MainNav(){
         <main>
             <header id="header">
                 <nav id='header-main-nav'>
+                    <div>
+                        <h1 class="logo"> CB </h1>
+                    </div>
+                    
                     <div class="header-main-nav--hamburger" onClick={hamburgerMenuClick}>
                         <div class="line line-1" ></div>
                         <div class="line line-2" ></div>

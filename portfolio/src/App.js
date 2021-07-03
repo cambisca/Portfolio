@@ -7,7 +7,7 @@ function App() {
   return (
     <div id="App">
       <MainNav />
-      <SideNav />
+      {/* <SideNav /> */}
     </div>
   );
 }
