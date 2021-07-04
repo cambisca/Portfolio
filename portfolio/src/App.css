@@ -104,7 +104,6 @@ body {
   /* color: var(--primary-color); */
   color: white;
   font-size: calc(1rem + 1.06667vw);
-  border-bottom: white solid 3px;
   padding: 0;
 }
 
@@ -264,13 +263,13 @@ main {
 }
 
 .showcase__content--title {
+  font-family: "Rock Salt";
   font-size: calc(2rem + 3vw); 
   color: white;
 
 }
 
 .showcase__content--para {
-  font-family: "Indie Flower";
   font-size: calc(1.5rem + 1vw);
   color: white;
 }
@@ -320,17 +319,29 @@ main {
 }
 
 .projects-header {
+  font-family: "Indie Flower";
+  font-weight: 1000;
   color: var(--primary-color);
-  font-size: 5rem;
-  
+  font-size: calc(2rem + 3vw);
+  align-self: center;
+  text-shadow: 5px 5px #cbc3fb;
+  text-shadow: 5px 5px #ffffff;
 }
 
 #projects {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   padding: 2rem;
-  background-color: rgb(221, 221, 221);
+  background-color: #dad9e0;
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem;
 }
 
 .project__card {
@@ -364,6 +375,7 @@ main {
 
   padding: 2rem;
   background-color: var(--tertiary-color);
+  background: linear-gradient(0deg, rgba(218,217,224,1) 0%, rgba(225,221,253,1) 6%);
 }
 
 .about-me__image-box,
@@ -437,14 +449,18 @@ main {
 .languages-header-box {
   padding: 5vh;
   display: flex;
-  background-color: var(--secondary-color);
+  /* background-color: var(--secondary-color); */
   justify-content: center;
   align-items: center;
 }
 
 .languages-header {
+  font-family: "Indie Flower";
+  font-weight: 900;
+  /* letter-spacing: .25rem; */
   color: var(--primary-color);
-  font-size: 5rem;
+  text-shadow: 5px 5px #baaffb;
+  font-size: calc(2rem + 3vw);
   
 }
 
@@ -454,6 +470,13 @@ main {
   justify-content: center;
   padding: 2rem;
   background-color: var(--secondary-color);
+}
+
+.language-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem;
 }
 
 .lang-card {
@@ -593,7 +616,7 @@ input[type=submit] {
     right: -30rem;
     width: 30rem;
     height: 100%;
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     text-align: center;
 
   }
@@ -609,7 +632,7 @@ input[type=submit] {
     top: 2rem;
     right: 3rem;
     cursor: pointer;
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     padding: 1rem;
     border-radius: 50%;
 
