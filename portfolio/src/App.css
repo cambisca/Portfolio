@@ -82,7 +82,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
 
-  background-color: var(--tertiary-color);
+  background-color: var(--primary-color);
 }
 
 .side-nav-content--logo {
@@ -91,7 +91,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--tertiary-color);
+  background-color: var(--primary-color);
 }
 
 .side-nav-content--logo img {
@@ -139,6 +139,7 @@ main {
 /********** Main Nav Header  **********/
 #header {
   background-color: var(--primary-color);
+  
   height: calc(3vw + 3vh);
   /* width: calc(100vw - (3vw + 3vh)); */
   top: 0;
@@ -381,7 +382,7 @@ main {
 .about-me__image-box,
 .about-me__content {
   flex-basis: 40rem;
-  padding: 2rem;
+  padding: 3rem;
   flex-grow: 1;
 }
 
@@ -459,7 +460,7 @@ main {
   font-weight: 900;
   /* letter-spacing: .25rem; */
   color: var(--primary-color);
-  text-shadow: 5px 5px #baaffb;
+  text-shadow: 5px 5px #baaff5;
   font-size: calc(2rem + 3vw);
   
 }

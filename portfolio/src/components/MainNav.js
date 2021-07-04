@@ -28,17 +28,13 @@ function MainNav(){
     return (
         <main>
             <header id="header">
-                <nav id='header-main-nav'>
-                    <div>
-                        <h1 class="logo"> CB </h1>
-                    </div>
-                    
+                <nav id='header-main-nav'>           
                     <div class="header-main-nav--hamburger" onClick={hamburgerMenuClick}>
                         <div class="line line-1" ></div>
                         <div class="line line-2" ></div>
                         <div class="line line-3" ></div>
                     </div> 
-                     
+                        
                     <ul class="header-main-nav-links">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">About</a></li>
@@ -46,9 +42,7 @@ function MainNav(){
                         <li><a href="#">Languages</a></li>
                         <li><a href="#">Contact</a></li>
                         <li><a class="resume-select" href="#"> Resume </a></li>
-                    </ul>
-                    
-                    
+                    </ul>    
                 </nav>
             </header>
 
@@ -58,7 +52,6 @@ function MainNav(){
                     <p class="showcase__content--para"> Front End Developer </p>
                     <a href="#" class="showcase__content--link"> My Work </a>
                 </div>
-
             </section>
 
             <section id="about-me">
@@ -76,10 +69,6 @@ function MainNav(){
                     </p>
                 </div>
             </section>
-
-            {/* <div class="projects-header-box">
-                <h2 class="projects-header"> Projects </h2>
-            </div> */}
 
             <section id="projects">
                 <h1 class="projects-header"> Projects </h1>
@@ -111,13 +100,9 @@ function MainNav(){
                 
             </section>
 
-            {/* <div class="languages-header-box">
-                <h2 class="languages-header"> Technologies </h2>
-            </div> */}
-
             <section id="languages">
                 <h1 class="languages-header"> Technologies </h1>
-                
+
                 <div class="language-list">
                     <div class="lang-card lang-1">
                         <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--jvDLhx0b--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/cpcr5w0kgl6j94tss7n9.png" alt="Ruby on Rails"/>
@@ -141,44 +126,7 @@ function MainNav(){
                 </div>
             </section>
             
-            {/* <section id="testimonials">
-                <div class="testimonial-card">
-                    <div class="testimonial-card--img">
-                        <img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/03/07/11/brooklyn-manhattan-bridge.jpg?width=1200&auto=webp&quality=75" alt="I GOT NEXT" />
-                    </div>
-
-                    <div class="testimonial-card--content">
-                        <h3 class="testimonial-card-content--title"> I GOT NEXT </h3>
-                        <div class="testimonial-card-content--links">
-                            <a href="#"> Demo </a>
-                            <a href="#"> Netlify </a>
-                            <a href="#"> Github </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-card--img">
-                        <img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/03/07/11/brooklyn-manhattan-bridge.jpg?width=1200&auto=webp&quality=75" alt="Discourse" />
-                    </div>
-
-                    <div class="testimonial-card--content">
-                        <h3 class="testimonial-card-content--title"> DISCOURSE </h3>
-                        <p class="testimonial-card-content--para"> Demo Netlify Github </p>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-card--img">
-                        <img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/03/07/11/brooklyn-manhattan-bridge.jpg?width=1200&auto=webp&quality=75" alt="The Actors Studio" />
-                    </div>
-
-                    <div class="testimonial-card--content">
-                        <h3 class="testimonial-card-content--title"> THE ACTORS STUDIO</h3>
-                        <p class="testimonial-card-content--para"> Demo Netlify Github </p>
-                    </div>
-                </div>
-            </section> */}
+            
 
             <section id="contact">
                 <form class="contact__form">
