@@ -235,7 +235,7 @@ main {
 
   display: flex;
   justify-content: flex-start;
-  align-items: flex-end;
+  align-items: center;
 }
 
 #showcase__content {
