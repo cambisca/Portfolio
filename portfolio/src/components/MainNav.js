@@ -4,6 +4,14 @@ import React, { useState } from 'react';
 function MainNav(){
 
     const [hamburgerMenu, setHamburgerMenu] = useState(false)
+    const [emailForm, setEmailForm] = useState({
+        name: '',
+        email: '',
+        subject: '',
+        message: '',
+        sent: false,
+        buttonText: 'Send Message'
+    })
 
     function hamburgerMenuClick(e){
         if (e.target.parentNode.id) {
@@ -23,6 +31,18 @@ function MainNav(){
 
     }
 
+    function submitEmail(e){
+        setEmailForm({
+            buttonText: '...sending'
+        })
+
+        let data = {
+            name: emailForm.name,
+            email: emailForm.email,
+            subject: emailForm.subject,
+            message: emailForm.message,
+        }
+    }
     
 
     return (
@@ -50,7 +70,6 @@ function MainNav(){
                 <div id="showcase__content">
                     <h1 class="showcase__content--title"> Cameron Bisca </h1>
                     <p class="showcase__content--para"> Front End Developer </p>
-                    <a href="#" class="showcase__content--link"> My Work </a>
                 </div>
             </section>
 
@@ -129,7 +148,7 @@ function MainNav(){
             
 
             <section id="contact">
-                <form class="contact__form">
+                <form class="contact__form" >
                     <input type="text" placeholder="Name" />
                     
                     <input type="email" placeholder="Email" />

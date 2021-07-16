@@ -228,14 +228,14 @@ main {
 
 #showcase {
   height: 100vh;
-  background-image: url('images/IMG_0563.jpeg');
+  background-image: url('images/a7DiccEQ.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
 }
 
 #showcase__content {
@@ -245,7 +245,7 @@ main {
   /* margin-left: calc(2vw); */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   border-radius: 10px;
 
   animation: hero 2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
@@ -556,8 +556,10 @@ main {
 
 #contact {
   height: 100vh;
-  background-image: url('images/IMG_0563.jpeg');
-  background-position: 95% 30%;
+  background-image: url('https://cdn.dribbble.com/users/3497212/screenshots/11476810/media/c18175dc05724f0c933fa8f49b2ff875.gif');
+  background-repeat: no-repeat;
+  background-position: 20% 0%;
+  background-size: 400px 300px;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -719,4 +721,47 @@ input[type=submit] {
 }
 
 
+@media screen and (max-width: 1150px) {
+  #showcase {
+    height: 100vh;
+    background-image: url('images/a7DiccEQ.jpg');
+    background-size: cover;
+    background-position: 60%;
+    background-attachment: fixed;
+  
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* padding: 4rem; */
+  }
+}
 
+@media screen and (max-width: 980px) {
+  #showcase {
+    height: 100vh;
+    background-image: url('images/a7DiccEQ.jpg');
+    background-size: cover;
+    background-position: 65%;
+    background-attachment: fixed;
+  
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* padding: 4rem; */
+  }
+}
+
+@media screen and (max-width: 830px) {
+  #showcase {
+    height: 100vh;
+    background-image: url('images/a7DiccEQ.jpg');
+    background-size: cover;
+    background-position: 70%;
+    background-attachment: fixed;
+  
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 4rem;
+  }
+}
