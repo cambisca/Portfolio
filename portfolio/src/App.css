@@ -94,16 +94,11 @@ body {
   background-color: var(--primary-color);
 }
 
-.side-nav-content--logo img {
-  width: calc(3vw + 3vh);
-  object-fit: cover;
-}
-
 .logo {
   font-family: "Rock Salt";
   /* color: var(--primary-color); */
   color: white;
-  font-size: calc(1rem + 1.06667vw);
+  font-size: calc(1vw + 1vh);
   padding: 0;
 }
 
@@ -232,7 +227,9 @@ main {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  
 
+  background-repeat: no-repeat;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -388,8 +385,8 @@ main {
 
 .about-me__image {
   border-radius: 50%;
-  width: 80%;
-  height: 80%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -504,62 +501,12 @@ main {
   filter: contrast(200%);
 }
 
-#testimonials {
-  padding: calc(1rem + 2vw);
-  background-color: var(--secondary-color);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.testimonial-card {
-  display: flex;
-  padding: 2vw;
-  flex-basis: 50rem;
-  position: relative;
-  flex-grow: 1;
-  overflow: hidden;
-  align-items: center;
-  justify-content: center;
-
-}
-
-.testimonial-card--img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: all 0.35s ease-in-out;
-}
-
-.testimonial-card--img {
-  width: 100%;
-  height: 100%;
-}
-
-.testimonial-card-content--title {
-  font-size: 3rem;
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
-}
-
-.testimonial-card-content--para {
-  font-size: 1.5rem;
-}
-
-.testimonial-card--content {
-  position: absolute;
-  background-color: rgba(255, 255, 255, 0.623);
-  top: 75%;
-  left: 1;
-}
-
 #contact {
-  height: 100vh;
+  height: calc(100vh - (3vh + 3vw));
   background-image: url('https://cdn.dribbble.com/users/3497212/screenshots/11476810/media/c18175dc05724f0c933fa8f49b2ff875.gif');
   background-repeat: no-repeat;
-  background-position: 20% 0%;
-  background-size: 400px 300px;
+  /* background-position: 5% 5%; */
+  background-size: 1000px 800px;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -567,11 +514,13 @@ main {
 
 .contact__form {
   flex-basis: 40rem;
-
+  width: 10vw;
   display: flex;
   flex-direction: column;
-  background-color: var(--tertiary-color);
+  background-color: rgb(255, 255, 255);
   opacity: .8;
+  border: 3px solid black;
+  border-radius: 10px 0px 0px 0px;
 }
 
 .contact__form input, 
@@ -721,7 +670,7 @@ input[type=submit] {
 }
 
 
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1190px) {
   #showcase {
     height: 100vh;
     background-image: url('images/a7DiccEQ.jpg');
@@ -732,11 +681,37 @@ input[type=submit] {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    /* padding: 4rem; */
+    padding: 4rem;
   }
 }
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 970px) {
+  #showcase {
+    height: 100vh;
+    background-image: url('images/a7DiccEQ.jpg');
+    background-size: cover;
+    background-position: 61%;
+    background-attachment: fixed;
+  
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+  }
+} 
+
+@media screen and (max-width: 897px) {
+  .about-me__image {
+    border-radius: 50%;
+    width: 75%;
+    height: 75%;
+    object-fit: cover;
+  }
+}
+
+
+
+@media screen and (max-width: 830px) {
   #showcase {
     height: 100vh;
     background-image: url('images/a7DiccEQ.jpg');
@@ -747,21 +722,29 @@ input[type=submit] {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    /* padding: 4rem; */
+    padding: 4rem;
+  }
+
+  .logo {
+    font-family: "Rock Salt";
+    /* color: var(--primary-color); */
+    color: white;
+    font-size: calc(1rem + 1vw);
+    padding: 0;
   }
 }
 
-@media screen and (max-width: 830px) {
+@media screen and (max-width: 525px) {
   #showcase {
     height: 100vh;
     background-image: url('images/a7DiccEQ.jpg');
     background-size: cover;
-    background-position: 70%;
+    background-position: 69%;
     background-attachment: fixed;
   
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 4rem;
+    
   }
 }
