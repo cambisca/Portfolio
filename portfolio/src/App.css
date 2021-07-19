@@ -401,8 +401,8 @@ main {
 .about-me__image-box,
 .about-me__content {
   flex-basis: 40rem;
-  padding: 3rem;
-  flex-grow: 1;
+  padding: 2rem;
+  flex-grow: .25;
 }
 
 .about-me__image {
@@ -413,7 +413,7 @@ main {
 }
 
 .about-me__content--title {
-  font-size: 4rem;
+  font-size: 3rem;
   padding: 1rem 0;
   color: white;
   text-transform: uppercase;
@@ -434,14 +434,14 @@ main {
 .about-me__content--title,
 .about-me__content--para {
   margin-bottom: 4rem;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
 }
 
 .about-me__content--para {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
 }
 
-.about-me__content--link:link,
+/* .about-me__content--link:link,
 .about-me__content--link:visited {
   padding: 1rem 0;
   font-size: 1.5rem;
@@ -450,7 +450,7 @@ main {
   text-transform: uppercase;
 
   position: relative;
-}
+} */
 
 /* .about-me__content--link:link::after,
 .about-me__content--link:visited::after {
@@ -717,7 +717,7 @@ input[type=submit] {
   }
 
   .about-me__image-box,
-.about-me__content {
+  .about-me__content {
   flex-basis: 40rem;
   padding: 3rem;
   flex-grow: 0.25;
@@ -735,11 +735,17 @@ input[type=submit] {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    
+  }
+
+  .about-me__image {
+    border-radius: 50%;
+    width: 75%;
+    height: 75%;
+    object-fit: cover;
   }
 } 
 
-@media screen and (max-width: 897px) {
+@media screen and (max-width: 1078px) {
   .about-me__image {
     border-radius: 50%;
     width: 75%;
