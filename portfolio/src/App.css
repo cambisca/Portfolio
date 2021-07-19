@@ -224,8 +224,8 @@ main {
 #showcase {
   height: 100vh;
   background-image: url('images/a7DiccEQ.jpg');
-  background-size: cover;
-  background-position: center;
+  background-size: 1800px 1200px;
+  background-position: 40%;
   background-attachment: fixed;
   
 
@@ -503,10 +503,12 @@ main {
 
 #contact {
   height: calc(100vh - (3vh + 3vw));
+  height: 100vh;
   background-image: url('https://cdn.dribbble.com/users/3497212/screenshots/11476810/media/c18175dc05724f0c933fa8f49b2ff875.gif');
   background-repeat: no-repeat;
   /* background-position: 5% 5%; */
-  background-size: 1000px 800px;
+  background-size: 360px 240px;
+  background-position: 50% 5%;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -519,8 +521,8 @@ main {
   flex-direction: column;
   background-color: rgb(255, 255, 255);
   opacity: .8;
-  border: 3px solid black;
-  border-radius: 10px 0px 0px 0px;
+  /* border: 3px solid black;
+  border-radius: 10px 0px 0px 0px; */
 }
 
 .contact__form input, 
@@ -747,4 +749,11 @@ input[type=submit] {
     align-items: flex-start;
     
   }
+}
+
+.about-me__image {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

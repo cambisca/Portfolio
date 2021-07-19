@@ -81,10 +81,22 @@ function MainNav(){
                 <div class="about-me__content">
                     <h2 class="about-me__content--title"> About Me </h2>
                     <p class="about-me__content--para"> 
-                        Successful people know that true education is what you get for yourself and by yourself, it’s not what someone gives or tells you, they know that true success in life does not come by luck, a lucky man is not a successful man, true winners know that they must develop skills and acquire knowledge before becoming truly successful.
+                        Yo! I'm Cameron but I usually go by Cam. I am a Brooklyn boy and software engineer with a passion for expressive front end development. 
+                        
                         <br/>
                         <br/>
-                        Successful people know that true education is what you get for yourself and by yourself, it’s not what someone gives or tells you, they know that true success in life does not come by luck, a lucky man is not a successful man, true winners know that they must develop skills and acquire knowledge before becoming truly successful. 
+                        
+                        Before discovering my love for development I studied acting at various conservatories. It was at those institutions where I became fascinated by relationships and the motives/objectives of individuals. 
+
+                        <br/>
+                        <br/>
+
+                        This kind of education led me to where I am present day. Today, I aim to build applications that are not only useful but expressive and in adjustment. 
+
+                        <br/>
+                        <br/>
+
+                        When I've logged off you can find me on a basketball court, in a theatre, music venue, cocktail bar or hiking trail :) 
                     </p>
                 </div>
             </section>
