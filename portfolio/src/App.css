@@ -100,6 +100,12 @@ body {
   color: white;
   font-size: calc(1vw + 1vh);
   padding: 0;
+  transition: transform 0.3s;
+}
+
+.logo:hover,
+.logo:active {
+  transform: rotate(2turn);
 }
 
 .side-nav-content--social {
@@ -125,6 +131,38 @@ body {
   color: var(--secondary-color)
 }
 
+.fa-linkedin {
+  color: #006094;
+  transition: transform 0.3s;
+}
+
+.fa-linkedin:hover,
+.fa-linkedin:active {
+  color: #007ec2;
+  transform: translateY(-10px);
+}
+
+.fa-github {
+  color: #00a816;
+  transition: transform 0.3s;
+}
+
+.fa-github:hover, 
+.fa-github:active {
+  color: #00ff00;
+  transform: translateY(-10px);
+}
+
+.fa-medium {
+  color: rgb(206, 206, 206);
+  transition: transform 0.3s;
+}
+
+.fa-medium:hover,
+.fa-medium:active {
+  color: white;
+  transform: translateY(-10px);
+}
 
 /*********** Main content  *************/
 main {
@@ -356,13 +394,14 @@ main {
 
 .project__card {
   position: relative;
-  padding: 1rem;
+  /* padding: 1rem; */
   /* flex-basis: 30rem; */
   flex-grow: 0.5;
   height: calc(20rem + 3vw);
-  border: 1px solid orange;
+  /* border: 1px solid orange; */
   justify-content: center;
   align-items: center;
+  margin: 1rem;
 }
 
 
@@ -370,25 +409,26 @@ main {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  
 
   transition: filter 0.6s ease;
 }
 
-.project__card img:hover, 
-.project__card img:active {
-  filter: sepia(80%);
-}
 
 .overflow {
   position: absolute;
-  opacity: 1;
+  opacity: 0;
   background: black;
   height: 100%;
   width: 100%;
   top: 0;
   border: 1px solid red;
   cursor: pointer;
+}
+
+.project__card:hover .overflow, 
+.project__card img:active .overflow {
+  opacity: 60%;
+  transition: 0.4s ease-in-out;
 }
 
 .about-me-wrapper {

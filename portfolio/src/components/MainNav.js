@@ -2,7 +2,10 @@ import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import { useForm } from "react-hook-form";
 import { Link } from 'react-scroll';
-import brooklynBridgePark from '../images/BBP_shot.jpg'
+import brooklynBridgePark from '../images/BBP_shot.jpg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { AiFillGithub } from '@fortawesome/free-brands-svg-icons';
+
 
 
 function MainNav(){
@@ -138,15 +141,17 @@ function MainNav(){
                     <h1 class="projects-header"> Projects </h1>
                     <div class="project-list">
                         <div className="project__card">
-                            <h1 className="text-uppercase text-center py-5">I Got Next</h1>
+                            {/* <h1 className="text-uppercase text-center py-5">I Got Next</h1> */}
                             
                             <img className="portfolio-image" src={brooklynBridgePark} alt="I Got Next project" />
-                            <div class="overflow"> </div>
+                            <div class="overflow"> 
+                                {/* <FontAwesomeIcon icon={faSearchPlus}/> */}
+                            </div>
                            
                         </div>
 
                         <div className="project__card">
-                            <h1 className="text-uppercase text-center py-5">Discourse</h1>
+                            {/* <h1 className="text-uppercase text-center py-5">Discourse</h1> */}
                             
                             <img className="portfolio-image" src={brooklynBridgePark} alt="Discourse project"/>
                             <div class="overflow"> </div>
