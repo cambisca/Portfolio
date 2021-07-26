@@ -560,7 +560,7 @@ main {
   background: transparent;
   border: none;
   border-bottom: var( --secondary-color) solid 0.1rem;
-
+  outline: 0;
 }
 
 .contact__form textarea {

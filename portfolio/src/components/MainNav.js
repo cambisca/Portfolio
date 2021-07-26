@@ -1,17 +1,18 @@
-import { faImages } from '@fortawesome/free-solid-svg-icons';
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
+import { useForm } from "react-hook-form";
+import { Link } from 'react-scroll';
 
 function MainNav(){
 
-    const [hamburgerMenu, setHamburgerMenu] = useState(false)
-    const [emailForm, setEmailForm] = useState({
-        name: '',
-        email: '',
-        subject: '',
-        message: '',
-        sent: false,
-        buttonText: 'Send Message'
-    })
+
+    const { register, handleSubmit, errors } = useForm();
+    const [ successMessage, setSuccessMessage] = useState("");
+
+    const serviceID = "service_ID";
+    const templateID = "template_ID"
+    const userID = "user_U63Q8rTW6VUoEXNeEwEJN";
+    
 
     function hamburgerMenuClick(e){
         if (e.target.parentNode.id) {
@@ -27,22 +28,31 @@ function MainNav(){
             })
             console.log(e.target.parentNode.parentNode.childNodes[1].childNodes[0])
         } 
-        
-
     }
 
-    function submitEmail(e){
-        setEmailForm({
-            buttonText: '...sending'
-        })
-
-        let data = {
-            name: emailForm.name,
-            email: emailForm.email,
-            subject: emailForm.subject,
-            message: emailForm.message,
-        }
+    function onSubmit(data, r){
+        sendEmail(
+            serviceID, 
+            templateID,
+            {
+                name: data.name, 
+                email: data.email, 
+                subject: data.subject, 
+                message: data.message
+            }, 
+            userID
+            )
+            r.target.reset();
     }
+
+    function sendEmail(serviceID, templateID, variables, userID) {
+    
+        emailjs.send(serviceID, templateID, variables, userID)
+          .then(() => {
+            setSuccessMessage("Message sent. I'll get back to you asap!");
+          }).catch(err => console.error(`Something went wrong ${err}`));
+      }
+    
     
 
     return (
@@ -56,12 +66,12 @@ function MainNav(){
                     </div> 
                         
                     <ul class="header-main-nav-links">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Projects</a></li>
-                        <li><a href="#">Languages</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a class="resume-select" href="#"> Resume </a></li>
+                        <li><Link offset={-110} smooth={true} to="showcase" href="#">Home</Link></li>
+                        <li><Link offset={-62} smooth={true} to="about-me" href="#">About</Link></li>
+                        <li><Link offset={-100} smooth={true} to="projects-container" href="#">Projects</Link></li>
+                        <li><Link offset={-80} smooth={true} to="languages" href="#">Languages</Link></li>
+                        <li><Link offset={-62} smooth={true} to="contact" href="#">Contact</Link></li>
+                        <li><Link offset={-110} class="resume-select" href="#"> Resume </Link></li>
                     </ul>    
                 </nav>
             </header>
@@ -103,6 +113,7 @@ function MainNav(){
                     </div>
                 </section>
             </section>
+
             <section class="projects-container">
                 <section id="projects">
                     <h1 class="projects-header"> Projects </h1>
@@ -115,21 +126,7 @@ function MainNav(){
                             <img src="https://travelforlifenow.com/travelforlifenow.com/uploads/2019/07/Jefferson-St-Bushwick-June-2019-tny.jpg" alt="poster" />
                         </div>
 
-                        <div class="project__card">
-                            <img src="https://patch.com/img/cdn20/users/22926829/20170623/095152/styles/raw/public/article_images/bed_stuy_kathleen_culliton-1498225756-7379.jpg" alt="poster" />
-                        </div>
-
-                        <div class="project__card">
-                            <img src="https://patch.com/img/cdn20/users/22926829/20170623/095152/styles/raw/public/article_images/bed_stuy_kathleen_culliton-1498225756-7379.jpg" alt="poster" />
-                        </div>
-
-                        <div class="project__card">
-                            <img src="https://patch.com/img/cdn20/users/22926829/20170623/095152/styles/raw/public/article_images/bed_stuy_kathleen_culliton-1498225756-7379.jpg" alt="poster" />
-                        </div>
-
-                        <div class="project__card">
-                            <img src="https://patch.com/img/cdn20/users/22926829/20170623/095152/styles/raw/public/article_images/bed_stuy_kathleen_culliton-1498225756-7379.jpg" alt="poster" />
-                        </div>
+                        
                     </div>
                     
                 </section>
@@ -163,18 +160,44 @@ function MainNav(){
                 </section>
             </section>
 
-
             <section id="contact">
-                <form class="contact__form" >
-                    <input type="text" placeholder="Name" />
+                <form class="contact__form" onSubmit={handleSubmit(onSubmit)}>
+                    <input 
+                        type="text" 
+                        placeholder="Name" 
+                        name="name"
+                        // reference={
+                        //     register({
+                        //         required: "Please enter your name", 
+                        //         maxLength: {
+                        //             value: 20, 
+                        //             message: "You've exceeded the 20 character limit"
+                        //         }
+                        //     })
+                        // }
+                    />
+                    {/* <span class="error-message"> 
+                        {errors.name && errors.name.message} 
+                    </span> */}
                     
-                    <input type="email" placeholder="Email" />
+                    <input 
+                        type="email" 
+                        placeholder="Email" 
+                        name="email"
+                    />
                     
-                    <input type="text" placeholder="Subject" />
+                    <input 
+                        type="text" 
+                        placeholder="Subject" 
+                        name="subject"    
+                    />
                     
-                    <textarea type="message" />
+                    <textarea 
+                        type="message" 
+                        name="message"
+                    />
                     
-                    <input type="submit" value="submit" />
+                    <input type="submit" value="Submit" />
                 </form>
             </section>
         </main>
