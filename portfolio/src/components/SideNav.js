@@ -13,15 +13,15 @@ function SideNav(){
                 <ul class="side-nav-content--social">
 
                     <a href="https://www.linkedin.com/in/cameron-bisca/">
-                        <FontAwesomeIcon icon={faLinkedin}  size="2x"/>
+                        <FontAwesomeIcon icon={faLinkedin}  />
                     </a>
                     
                     <a href="https://github.com/cambisca">
-                        <FontAwesomeIcon icon={faGithub} color="green" size="2x"/>
+                        <FontAwesomeIcon icon={faGithub} color="green" />
                     </a>
 
                     <a href="https://cjbisca.medium.com/">
-                        <FontAwesomeIcon icon={faMedium} size="2x"/>
+                        <FontAwesomeIcon icon={faMedium} />
                     </a>
                     
                 </ul>

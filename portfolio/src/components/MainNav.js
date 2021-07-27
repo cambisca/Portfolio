@@ -10,8 +10,12 @@ import { AiFillGithub } from '@fortawesome/free-brands-svg-icons';
 
 function MainNav(){
 
-
-    const { register, handleSubmit, errors } = useForm();
+    const [ visible, setVisible ] = useState(false)
+    const { 
+        register,
+        handleSubmit,
+        formState: { errors },
+      } = useForm();
     const [ successMessage, setSuccessMessage] = useState("");
 
     const serviceID = "service_ID";
@@ -53,11 +57,21 @@ function MainNav(){
     function sendEmail(serviceID, templateID, variables, userID) {
     
         emailjs.send(serviceID, templateID, variables, userID)
-          .then(() => {
-            setSuccessMessage("Message sent. I'll get back to you asap!");
-          }).catch(err => console.error(`Something went wrong ${err}`));
-      }
+          .then(successfulSend)
+          .catch(err => console.error(`Something went wrong ${err}`));
+    }
     
+    const successfulSend = () => {
+        setSuccessMessage(
+          "Form sent successfully! I'll contact you as soon as possible."
+        );
+        setVisible(true);
+    
+        setTimeout(() => {
+          setSuccessMessage("");
+          setVisible(false);
+        }, 4000);
+    };
     
 
     return (
@@ -119,23 +133,6 @@ function MainNav(){
                 </section>
             </section>
 
-            {/* <section class="projects-container">
-                <section id="projects">
-                    <h1 class="projects-header"> Projects </h1>
-                    <div class="project-list">
-                        <div class="project__card">
-                            <img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/03/07/11/brooklyn-manhattan-bridge.jpg?width=1200&auto=webp&quality=75" alt="poster" />
-                        </div>
-
-                        <div class="project__card">
-                            <img src="https://travelforlifenow.com/travelforlifenow.com/uploads/2019/07/Jefferson-St-Bushwick-June-2019-tny.jpg" alt="poster" />
-                        </div>
-
-                        
-                    </div>
-                    
-                </section>
-            </section> */}
             <section className="projects-container">
                 <section id="projects">
                     <h1 class="projects-header"> Projects </h1>
@@ -191,41 +188,59 @@ function MainNav(){
             </section>
 
             <section id="contact">
+
                 <form class="contact__form" onSubmit={handleSubmit(onSubmit)}>
+                <span class="success-message"> { visible ? successMessage : null } </span>
                     <input 
                         type="text" 
                         placeholder="Name" 
                         name="name"
-                        // reference={
-                        //     register({
-                        //         required: "Please enter your name", 
-                        //         maxLength: {
-                        //             value: 20, 
-                        //             message: "You've exceeded the 20 character limit"
-                        //         }
-                        //     })
-                        // }
+                        {
+                            ...register('name', { required: "Please enter your name" })
+                        }
                     />
-                    {/* <span class="error-message"> 
+                    <span class="error-message"> 
                         {errors.name && errors.name.message} 
-                    </span> */}
+                    </span> 
                     
                     <input 
                         type="email" 
                         placeholder="Email" 
                         name="email"
+                        {...register("email", {
+                            required: "Please provide your email",
+                            pattern: {
+                              value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                              message: "Invalid email format",
+                            },
+                          })}
                     />
+                    <span class="error-message"> 
+                        {errors.email && errors.email.message} 
+                    </span> 
                     
                     <input 
                         type="text" 
                         placeholder="Subject" 
-                        name="subject"    
+                        name="subject" 
+                        {
+                            ...register('subject', { required: "Please enter a subject" })
+                        }   
                     />
+                    <span class="error-message"> 
+                        {errors.subject && errors.subject.message} 
+                    </span> 
                     
                     <textarea 
                         type="message" 
                         name="message"
+                        {
+                            ...register('message', { required: "Please enter your message " })
+                        }
                     />
+                    <span class="error-message"> 
+                        {errors.message && errors.message.message} 
+                    </span> 
                     
                     <input type="submit" value="Submit" />
                 </form>

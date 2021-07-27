@@ -105,7 +105,7 @@ body {
 
 .logo:hover,
 .logo:active {
-  transform: rotate(2turn);
+  transform: rotate3d(1, 1.0, 1.0, 360deg);
 }
 
 .side-nav-content--social {
@@ -134,6 +134,7 @@ body {
 .fa-linkedin {
   color: #006094;
   transition: transform 0.3s;
+  font-size: 2.5rem;
 }
 
 .fa-linkedin:hover,
@@ -145,6 +146,7 @@ body {
 .fa-github {
   color: #00a816;
   transition: transform 0.3s;
+  font-size: 2.5rem;
 }
 
 .fa-github:hover, 
@@ -156,6 +158,7 @@ body {
 .fa-medium {
   color: rgb(206, 206, 206);
   transition: transform 0.3s;
+  font-size: 3rem;
 }
 
 .fa-medium:hover,
@@ -563,11 +566,7 @@ main {
   padding: 2rem;
   flex-basis: 40rem;
   flex-grow: .5;
-
-  /* clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%); */
 }
-
-
 
 .lang-card img {
   height: 100%;
@@ -593,6 +592,10 @@ main {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+}
+
+.success-message {
+  color: red;
 }
 
 .contact__form {
@@ -625,14 +628,6 @@ input[type=submit] {
   cursor: pointer;
 }
 
-
-@media screen and (max-width: 900px) {
-  #showcase {
-    background-position: 100%;
-    align-items: flex-end;
-  }
-
-}
 
 @media screen and (max-width: 610px) {
 
@@ -778,7 +773,7 @@ input[type=submit] {
   .about-me__content {
   flex-basis: 40rem;
   padding: 3rem;
-  flex-grow: 0.25;
+  flex-grow: 0.20;
 }
 }
 
@@ -835,20 +830,6 @@ input[type=submit] {
   }
 }
 
-@media screen and (max-width: 525px) {
-  #showcase {
-    height: 100vh;
-    background-image: url('images/a7DiccEQ.jpg');
-    background-size: cover;
-    background-position: 69%;
-    background-attachment: fixed;
-  
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    
-  }
-}
 
 @media screen and (min-width: 1670px) {
   #showcase {
@@ -902,50 +883,24 @@ input[type=submit] {
     width: 107.14rem;
   }
 
+  #showcase {
+    height: 100vh;
+    background-image: url('images/a7DiccEQ.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+  }
+
 }
 
 
 /************ Contact Queries **************/
 
-@media screen and (max-width: 400px) {
-  #contact {
-    height: calc(100vh - (2vw + 3vh));
-    background-image: url('https://cdn.dribbble.com/users/3497212/screenshots/11476810/media/c18175dc05724f0c933fa8f49b2ff875.gif');
-    background-repeat: no-repeat;
-    /* background-size: 340px 240px; */
-    background-size: 170px 140px;
-    background-position: 50% 10%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-  }
-}
-
-@media screen and (max-width: 499px) {
-  #contact {
-    height: calc(100vh - (2vw + 3vh));
-    background-image: url('https://cdn.dribbble.com/users/3497212/screenshots/11476810/media/c18175dc05724f0c933fa8f49b2ff875.gif');
-    background-repeat: no-repeat;
-    background-size: 360px 240px;
-    background-position: 50% 5%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-  }
-}
-
-@media screen and (min-width: 500px) {
-  #contact {
-    height: calc(100vh - (2vw + 3vh));
-    background-image: url('https://cdn.dribbble.com/users/3497212/screenshots/11476810/media/c18175dc05724f0c933fa8f49b2ff875.gif');
-    background-repeat: no-repeat;
-    background-size: 540px 360px;
-    background-position: 50% 5%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-  }
-}
 
 @media screen and (min-width: 767px) {
   #contact {
@@ -974,15 +929,17 @@ input[type=submit] {
 }
 
 @media screen and (min-width: 1000px) {
-  #contact {
-    height: calc(100vh - (2vw + 3vh));
-    background-image: url('https://cdn.dribbble.com/users/3497212/screenshots/11476810/media/c18175dc05724f0c933fa8f49b2ff875.gif');
-    background-repeat: no-repeat;
-    background-size: 810px 540px;
-    background-position: 50% 5%;
+  #showcase {
+    height: 100vh;
+    background-image: url('images/a7DiccEQ.jpg');
+    background-size: cover;
+    background-position: 60%;
+    background-attachment: fixed;
+  
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
   }
 }
 
@@ -997,11 +954,53 @@ input[type=submit] {
     justify-content: center;
     align-items: flex-end;
   }
+
+  #showcase {
+    height: 100vh;
+    background-image: url('images/a7DiccEQ.jpg');
+    background-size: cover;
+    background-position: 35%;
+    background-attachment: fixed;
+  
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+  }
 }
 
 
+/********************* MOBILE *************************/
+@media screen and (max-width: 500px) {
 
+  #showcase {
+    height: 100vh;
+    background-image: url('images/a7DiccEQ.jpg');
+    background-size: cover;
+    background-position: 69%;
+    background-attachment: fixed;
+  
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+  }
 
-
-
-
+  .fa-linkedin {
+    color: #006094;
+    transition: transform 0.3s;
+    font-size: 1.75rem;
+  }
+  
+  .fa-github {
+    color: #00a816;
+    transition: transform 0.3s;
+    font-size: 1.75rem;
+  }
+  
+  .fa-medium {
+    color: rgb(206, 206, 206);
+    transition: transform 0.3s;
+    font-size: 1.75rem;
+  }
+}
