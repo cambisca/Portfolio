@@ -175,7 +175,6 @@ main {
 /********** Main Nav Header  **********/
 #header {
   background-color: var(--primary-color);
-  
   height: calc(2vw + 3vh);
   /* width: calc(100vw - (3vw + 3vh)); */
   top: 0;
@@ -235,7 +234,7 @@ main {
  left: 0;
  width: 100%;
  height: 0.25rem;
- background-color: white;
+ background-color: #12d300;
 
  transform: scaleX(0);
  transition: transform 0.6s cubic-bezier(1, 0, 0, 1);
@@ -362,18 +361,19 @@ main {
 }
 
 .projects-header {
-  font-family: "Indie Flower";
-  font-weight: 1000;
-  color: var(--primary-color);
-  font-size: calc(2rem + 3vw);
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.25rem;
+  color: black;
+  font-size: calc(1.75rem + 2vw);
   align-self: center;
-  text-shadow: 5px 5px #cbc3fb;
-  text-shadow: 5px 5px #ffffff;
+  text-shadow: 2px 2px #12d300;
+  
 }
 
 .projects-container {
   width: 100%;
   background-color: #dad9e0;
+  background-image: url('https://cutewallpaper.org/21/css-background-patterns/15-Examples-Of-Subtle-Light-Pattern-Background.png');
   display: flex;
   justify-content: center;
 }
@@ -384,7 +384,6 @@ main {
   flex-wrap: wrap;
   justify-content: center;
   padding: 2rem;
-  background-color: #dad9e0;
 }
 
 .project-list {
@@ -399,8 +398,8 @@ main {
   position: relative;
   /* padding: 1rem; */
   /* flex-basis: 30rem; */
-  flex-grow: 0.5;
-  height: calc(20rem + 3vw);
+  flex-grow: 0;
+  height: calc(15rem + 3vw);
   /* border: 1px solid orange; */
   justify-content: center;
   align-items: center;
@@ -424,7 +423,6 @@ main {
   height: 100%;
   width: 100%;
   top: 0;
-  border: 1px solid red;
   cursor: pointer;
 }
 
@@ -436,7 +434,8 @@ main {
 
 .about-me-wrapper {
   width: calc(100vw - (3vw + 3vh));
-  background: linear-gradient(0deg, rgba(218,217,224,1) 0%, rgba(225,221,253,1) 6%);
+  /* background: linear-gradient(0deg, rgba(218,217,224,1) 0%, rgba(225,221,253,1) 6%); */
+  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -444,7 +443,7 @@ main {
 
 #about-me {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 
@@ -457,13 +456,14 @@ main {
 .about-me__content {
   flex-basis: 40rem;
   padding: 2rem;
-  flex-grow: .25;
+  flex-grow: 0;
 }
 
 .about-me__image {
   border-radius: 50%;
-  width: 100%;
-  height: 100%;
+  border: 2px solid #12d300;
+  width: 80%;
+  height: 80%;
   object-fit: cover;
 }
 
@@ -484,6 +484,7 @@ main {
   height: 0.3rem;
   width: 10%;
   background-color: var(--primary-color);
+  background-color: #12d300;
 }
 
 .about-me__content--title,
@@ -494,32 +495,8 @@ main {
 
 .about-me__content--para {
   font-size: 1.4rem;
+  color: white;
 }
-
-/* .about-me__content--link:link,
-.about-me__content--link:visited {
-  padding: 1rem 0;
-  font-size: 1.5rem;
-  font-weight: 600;
-  letter-spacing: 0.2rem;
-  text-transform: uppercase;
-
-  position: relative;
-} */
-
-/* .about-me__content--link:link::after,
-.about-me__content--link:visited::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--primary-color);
-  transform: scaleY(0)
-  
-
-} */
 
 .languages-header-box {
   padding: 5vh;
@@ -530,18 +507,19 @@ main {
 }
 
 .languages-header {
-  font-family: "Indie Flower";
-  font-weight: 900;
-  /* letter-spacing: .25rem; */
+  font-family: 'Roboto', sans-serif;
+  font-weight: 1000;
+  text-shadow: 2px 2px #12d300;
+  letter-spacing: .25rem;
   color: var(--primary-color);
-  text-shadow: 5px 5px #baaff5;
-  font-size: calc(2rem + 3vw);
+  font-size: calc(1.75rem + 2vw);
   
 }
 
 #language-container {
   width: 100%;
   background-color: #dad9e0;
+  background-image: url('https://cutewallpaper.org/21/css-background-patterns/15-Examples-Of-Subtle-Light-Pattern-Background.png');
   display: flex;
   justify-content: center;
 }
@@ -552,7 +530,7 @@ main {
   justify-content: center;
   padding: 2rem;
   background-color: #dad9e0;
-  
+  background-image: url('https://cutewallpaper.org/21/css-background-patterns/15-Examples-Of-Subtle-Light-Pattern-Background.png');
 }
 
 .language-list {
@@ -564,8 +542,8 @@ main {
 
 .lang-card {
   padding: 2rem;
-  flex-basis: 40rem;
-  flex-grow: .5;
+  flex-basis: 30rem;
+  flex-grow: 0;
 }
 
 .lang-card img {
@@ -584,9 +562,6 @@ main {
 
 #contact {
   height: calc(100vh - (2vw + 3vh));
-  background-image: url('https://cdn.dribbble.com/users/3497212/screenshots/11476810/media/c18175dc05724f0c933fa8f49b2ff875.gif');
-  background-repeat: no-repeat;
-  /* background-position: 5% 5%; */
   background-size: 540px 360px;
   background-position: 50% 5%;
   display: flex;
@@ -598,6 +573,15 @@ main {
   color: red;
 }
 
+.contact-header {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.25rem;
+  color: black;
+  font-size: calc(2rem + 3vw);
+  align-self: center;
+  text-shadow: 2px 2px #12d300;
+}
+
 .contact__form {
   flex-basis: 40rem;
   width: 10vw;
@@ -606,6 +590,8 @@ main {
   background-color: rgb(255, 255, 255);
   opacity: .8;
 }
+
+
 
 .contact__form input, 
 .contact__form textarea {
@@ -698,43 +684,7 @@ input[type=submit] {
     transform: rotateZ(405deg) translate(-0.8rem, -0.6rem)
   }
 
-  /* .header-main-nav-links li {
-    opacity: 0;
-  } */
-
-  /* .header-main-nav-links li:nth-child(1) {
-    transition: all 0.5s ease-in-out 0.2s;
-    opacity: 1;
-  }
-
-  .header-main-nav-links li:nth-child(2) {
-    transition: all 0.5s ease-in-out 0.4s;
-    opacity: 1;
-  }
-
-  .header-main-nav-links li:nth-child(3) {
-    transition: all 0.5s ease-in-out 0.6s;
-    opacity: 1;
-  }
-
-  .header-main-nav-links li:nth-child(4) {
-    transition: all 0.5s ease-in-out 0.8s;
-    opacity: 1;
-  }
-
-  .header-main-nav-links li:nth-child(5) {
-    transition: all 0.5s ease-in-out 1s;
-    opacity: 1;
-  }
-
-  .header-main-nav-links li:nth-child(6) {
-    transition: all 0.5s ease-in-out 1.2s;
-    opacity: 1;
-  }
-
-  .fade {
-    opacity: 1;
-  } */
+  
 
   #showcase {
     background-position: 100%;
@@ -743,11 +693,6 @@ input[type=submit] {
 
   #contact {
     height: 100vh;
-    background-image: url('https://cdn.dribbble.com/users/3497212/screenshots/11476810/media/c18175dc05724f0c933fa8f49b2ff875.gif');
-    background-repeat: no-repeat;
-    /* background-position: 5% 5%; */
-    background-size: 360px 240px;
-    background-position: 50% 0%;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -797,13 +742,99 @@ input[type=submit] {
     object-fit: cover;
   }
 } 
-
+/*********** Tablet ************/
 @media screen and (max-width: 1078px) {
   .about-me__image {
     border-radius: 50%;
     width: 75%;
     height: 75%;
     object-fit: cover;
+  }
+
+  #contact {
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://cutewallpaper.org/21/css-background-patterns/15-Examples-Of-Subtle-Light-Pattern-Background.png');
+  }
+
+  .contact__form {
+    flex-basis: 40rem;
+    width: calc(35rem + 5vw);
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    opacity: .6;
+    justify-self: end;
+  }
+
+  .contact-header-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .contact-header {
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.25rem;
+    color: black;
+    font-size: calc(2rem + 3vw);
+    align-self: center;
+    text-shadow: 2px 2px #12d300;
+  }
+
+  .contact-header--para {
+    font-size: 1.5rem;
+    letter-spacing: 0.09rem;
+    font-weight: 600;
+  }
+}
+
+@media screen and (min-width: 1079px){
+  #contact {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://cutewallpaper.org/21/css-background-patterns/15-Examples-Of-Subtle-Light-Pattern-Background.png');
+  }
+
+  .contact__form {
+    flex-basis: 40rem;
+    width: calc(35rem + 5vw);
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    opacity: .6;
+    justify-self: end;
+  }
+
+  .contact-header-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 6rem;
+  }
+
+  .contact-header {
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.25rem;
+    color: black;
+    font-size: calc(3.5rem + 1vw);
+    align-self: center;
+    text-shadow: 2px 2px #12d300;
+  }
+
+  .contact-header--para {
+    font-size: 1.5rem;
+    letter-spacing: 0.09rem;
+    font-weight: 600;
   }
 }
 
@@ -857,10 +888,7 @@ input[type=submit] {
     flex-direction: row;
     /* align-items: center; */
     flex-wrap: wrap;
-  
     padding: 2rem;
-    background-color: var(--tertiary-color);
-    background: linear-gradient(0deg, rgba(218,217,224,1) 0%, rgba(225,221,253,1) 6%);
     width: 107.14rem;
   }
 
@@ -902,29 +930,20 @@ input[type=submit] {
 /************ Contact Queries **************/
 
 
-@media screen and (min-width: 767px) {
-  #contact {
-    height: calc(100vh - (2vw + 3vh));
-    background-image: url('https://cdn.dribbble.com/users/3497212/screenshots/11476810/media/c18175dc05724f0c933fa8f49b2ff875.gif');
-    background-repeat: no-repeat;
-    background-size: 540px 360px;
-    background-position: 50% 5%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-  }
+/*************** Showcase ****************/
+@media screen and (min-width: 1200px) {
 
   #showcase {
     height: 100vh;
     background-image: url('images/a7DiccEQ.jpg');
     background-size: cover;
-    background-position: 60%;
+    background-position: 35%;
     background-attachment: fixed;
   
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 4rem;
+    
   }
 }
 
@@ -941,34 +960,34 @@ input[type=submit] {
     align-items: flex-start;
     
   }
-}
 
-@media screen and (min-width: 1200px) {
-  #contact {
-    height: calc(100vh - (2vw + 3vh));
-    background-image: url('https://cdn.dribbble.com/users/3497212/screenshots/11476810/media/c18175dc05724f0c933fa8f49b2ff875.gif');
-    background-repeat: no-repeat;
-    background-size: 540px 360px;
-    background-position: 50% 0%;
+  #about-me {
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100rem;
+
+    padding: 2rem;
   }
 
+}
+
+@media screen and (min-width: 767px) {
+
   #showcase {
-    height: 100vh;
+    height: calc(100vh - (3vh + 3vw));
     background-image: url('images/a7DiccEQ.jpg');
     background-size: cover;
-    background-position: 35%;
+    background-position: 60%;
     background-attachment: fixed;
   
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    
+    padding: 4rem;
   }
 }
-
 
 /********************* MOBILE *************************/
 @media screen and (max-width: 500px) {
@@ -984,6 +1003,47 @@ input[type=submit] {
     justify-content: flex-start;
     align-items: flex-start;
     
+  }
+
+  #contact {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background-image: url('https://cutewallpaper.org/21/css-background-patterns/15-Examples-Of-Subtle-Light-Pattern-Background.png');
+  }
+
+  .contact__form {
+    flex-basis: 40rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    opacity: .6;
+  }
+
+  .contact-header-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .contact-header {
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.25rem;
+    color: black;
+    font-size: calc(2rem + 3vw);
+    align-self: center;
+    text-shadow: 2px 2px #12d300;
+  }
+
+  .contact-header--para {
+    font-size: 1rem;
+    letter-spacing: 0.06rem;
+    font-weight: 600;
   }
 
   .fa-linkedin {
@@ -1002,5 +1062,80 @@ input[type=submit] {
     color: rgb(206, 206, 206);
     transition: transform 0.3s;
     font-size: 1.75rem;
+  }
+
+  .about-me__content {
+    padding: 1rem;
+  }
+
+  .about-me__content--para {
+    font-size: 1.2rem;
+    color: white;
+  }
+}
+
+/****** iphone 5e *********/
+@media screen and (max-width: 400px) and (max-height: 600px){
+  #contact {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background-image: url('https://cutewallpaper.org/21/css-background-patterns/15-Examples-Of-Subtle-Light-Pattern-Background.png');
+  }
+
+  .contact__form {
+    flex-basis: 40rem;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    opacity: .6;
+  }
+
+  .contact__form input {
+    height: 3rem;
+  }
+
+  .contact-header-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .contact-header {
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.25rem;
+    color: black;
+    font-size: calc(2rem + 1vw);
+    align-self: center;
+    text-shadow: 2px 2px #12d300;
+  }
+
+  .contact-header--para {
+    font-size: 1rem;
+    letter-spacing: 0.04rem;
+    font-weight: 600;
+  }
+}
+
+/* Larger screens */
+@media screen and (min-width: 1300px) {
+  #about-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: calc(100rem + 10vw);
+
+    padding: 2rem;
+  }
+
+  .about-me__content {
+    flex-basis: 50rem;
   }
 }
