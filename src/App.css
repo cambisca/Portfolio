@@ -272,7 +272,7 @@ main {
 
 #showcase {
   height: calc(100vh - (2vw + 3vh));
-  background-image: url('images/Cam.FINAL.7.15.21\ IG-1.jpg');
+  background-image: url('images/CamFinal:new.jpeg');
   background-size: cover;
   background-position: 40%;
   background-attachment: fixed;
@@ -955,8 +955,9 @@ input[type=submit] {
 
   #showcase {
     height: 100vh;
+    max-width: 100%;
     background-size: cover;
-    background-position: 72%;
+    background-position: 72%;;
   
     display: flex;
     justify-content: flex-start;
