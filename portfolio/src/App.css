@@ -1,0 +1,1142 @@
+*, 
+*::before, 
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+:root {
+  font-size: 12px;
+  height: 100%;
+  width: 100%;
+
+  /* custom properties */
+  /* main color  */
+  /* --primary-color: #014d4e; */
+  /* --primary-color: #000f28; */
+  --primary-color: #000000;
+
+  /* secondary color */
+  /* --secondary-color: #ff9408; */
+  /* --secondary-color: #b5851d; */
+  /* --secondary-color: #abaeb9; */
+  --secondary-color: #d6d6da;
+
+  /* secondary color modified  */
+  /* --secondary-color-m: #ff94088e; */
+  --secondary-color-m: #000f288f;
+
+  /* tertiary color  */
+  /* --tertiary-color: #017374; */
+  /* --tertiary-color: #d3ccff; */
+  --tertiary-color: #e1ddfd;
+
+  /* teriary color modified  */
+  /* --tertiary-color-m: #01727498; */
+  --tertiary-color-m: #a5a5a598;
+
+}
+
+li {
+  list-style: none;
+}
+
+a:link, 
+a:visited {
+  text-decoration: none;
+  color: white; 
+  font-size: 1.5rem;
+}
+
+
+
+#App {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+body {
+  font-family: 'Baloo Tamma 2';
+  line-height: 1.8;
+
+  display: flex;
+}
+
+#side-nav {
+  position: sticky;
+  display: flex;
+  top: 0;
+  left: 0; 
+  height: 100vh;
+  width: calc(3vw + 3vh);
+  margin: 0;
+}
+
+.side-nav-content{
+  height: 100%;
+  width: calc(3vw + 3vh);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-color: var(--primary-color);
+}
+
+.side-nav-content--logo {
+  width: 100%;
+  height: calc(3vw + 3vh);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+}
+
+.logo {
+  font-family: "Rock Salt";
+  /* color: var(--primary-color); */
+  color: white;
+  font-size: calc(1vw + 1vh);
+  padding: 0;
+  transition: transform 0.3s;
+}
+
+.logo:hover,
+.logo:active {
+  transform: rotate3d(1, 1.0, 1.0, 360deg);
+}
+
+.side-nav-content--social {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.side-nav-content--social a {
+  font-size: calc(1.5rem + 0.25vw);
+  padding-bottom: calc(5rem + 1.06667vw);
+
+  color: white;
+
+  transition: color 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55) 
+}
+
+
+.side-nav-content--social a i:hover, 
+.side-nav-content--social a i:active {
+  color: var(--secondary-color)
+}
+
+.fa-linkedin {
+  color: #006094;
+  transition: transform 0.3s;
+  font-size: 2.5rem;
+}
+
+.fa-linkedin:hover,
+.fa-linkedin:active {
+  color: #007ec2;
+  transform: translateY(-10px);
+}
+
+.fa-github {
+  color: #00a816;
+  transition: transform 0.3s;
+  font-size: 2.5rem;
+}
+
+.fa-github:hover, 
+.fa-github:active {
+  color: #00ff00;
+  transform: translateY(-10px);
+}
+
+.fa-medium {
+  color: rgb(206, 206, 206);
+  transition: transform 0.3s;
+  font-size: 3rem;
+}
+
+.fa-medium:hover,
+.fa-medium:active {
+  color: white;
+  transform: translateY(-10px);
+}
+
+/*********** Main content  *************/
+main {
+  flex: 1;
+}
+
+/********** Main Nav Header  **********/
+#header {
+  background-color: var(--primary-color);
+  height: calc(2vw + 3vh);
+  /* width: calc(100vw - (3vw + 3vh)); */
+  top: 0;
+  position: sticky;
+  z-index: 2;
+}
+
+.logo__div {
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.actual__logo {
+  color: white;
+  height: calc( 1rem + 3vh);
+  width: calc(1rem + 3vw);
+}
+
+#header-main-nav {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  height: 100%;
+}
+
+.header-main-nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+
+.header-main-nav-links li {
+  padding-right: 3vw;
+
+}
+
+.header-main-nav-links li a {
+  position: relative;
+  padding: 0.2rem 0.6rem;
+  font-size: calc(1rem + 0.25vw);
+}
+
+/* .resume-select {
+  border: white solid 2px;
+  border-radius: 8px;
+} */
+
+.header-main-nav-links li a:link::before, 
+.header-main-nav-links li a:visited::before,
+.header-main-nav-links li a:link::after, 
+.header-main-nav-links li a:visited::after {
+ content: '';
+ position: absolute; 
+ left: 0;
+ width: 100%;
+ height: 0.25rem;
+ background-color: #12d300;
+
+ transform: scaleX(0);
+ transition: transform 0.6s cubic-bezier(1, 0, 0, 1);
+}
+
+.header-main-nav-links li a:link::before, 
+.header-main-nav-links li a:visited::before {
+  top: 0;
+  transform-origin: left;
+}
+
+.header-main-nav-links li a:link::after, 
+.header-main-nav-links li a:visited::after {
+  bottom: 0;
+  transform-origin: right;
+}
+
+.header-main-nav-links li a:hover::before, 
+.header-main-nav-links li a:active::before,
+.header-main-nav-links li a:hover::after, 
+.header-main-nav-links li a:active::after {
+  transform: scaleX(1);
+}
+
+/*************** Main content  *****************/
+
+#body-container {
+  width: 100%;
+}
+
+
+#showcase {
+  height: calc(100vh - (2vw + 3vh));
+  background-image: url('images/a7DiccEQ.jpg');
+  background-size: cover;
+  background-position: 40%;
+  background-attachment: fixed;
+  padding: 0;
+
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+#showcase__content {
+  background-color: rgba(253, 252, 252, 0);
+  padding: 0;
+  height: calc(4rem + 18vmax);
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  animation: hero 2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+@keyframes hero {
+  0% {
+    transform: translateX(100rem) rotate(360deg);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.showcase__content--title {
+  font-family: "Rock Salt";
+  font-size: calc(2rem + 1vw); 
+  color: white;
+
+}
+
+.showcase__content--para {
+  font-size: calc(1.5rem + 1vw);
+  color: white;
+}
+
+
+
+.showcase__content--link:link, 
+.showcase__content--link:visited {
+  padding: 1rem 0;
+  transition: all 0.5s ease-in-out;
+  width: 9rem;
+  transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 600rem;
+  position: relative;
+  z-index: 1;
+}
+
+.showcase__content--link:link::after,
+.showcase__content--link:visited::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--primary-color);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.45s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  z-index: -1;
+}
+
+.showcase__content--link:hover::after,
+.showcase__content--link:active::after {
+  transform: scale(1);
+  transform-origin: left;
+}
+
+.projects-header-box {
+  padding: 5vh;
+  display: flex;
+  background-color: var(--secondary-color);
+  justify-content: center;
+  align-items: center;
+}
+
+.projects-header {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.25rem;
+  color: black;
+  font-size: calc(1.75rem + 2vw);
+  align-self: center;
+  text-shadow: 2px 2px #12d300;
+  
+}
+
+.projects-container {
+  width: 100%;
+  background-color: #dad9e0;
+  background-image: url('https://cutewallpaper.org/21/css-background-patterns/15-Examples-Of-Subtle-Light-Pattern-Background.png');
+  display: flex;
+  justify-content: center;
+}
+
+#projects {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.project__card {
+  position: relative;
+  /* padding: 1rem; */
+  /* flex-basis: 30rem; */
+  flex-grow: 0;
+  height: calc(15rem + 3vw);
+  /* border: 1px solid orange; */
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+
+.project__card img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+
+  transition: filter 0.6s ease;
+}
+
+
+.overflow {
+  position: absolute;
+  opacity: 0;
+  background: black;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  cursor: pointer;
+}
+
+.project__card:hover .overflow, 
+.project__card img:active .overflow {
+  opacity: 60%;
+  transition: 0.4s ease-in-out;
+}
+
+.about-me-wrapper {
+  width: calc(100vw - (3vw + 3vh));
+  /* background: linear-gradient(0deg, rgba(218,217,224,1) 0%, rgba(225,221,253,1) 6%); */
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#about-me {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  padding: 2rem;
+  /* background-color: var(--tertiary-color);
+  background: linear-gradient(0deg, rgba(218,217,224,1) 0%, rgba(225,221,253,1) 6%); */
+}
+
+.about-me__image-box,
+.about-me__content {
+  flex-basis: 40rem;
+  padding: 2rem;
+  flex-grow: 0;
+}
+
+.about-me__image {
+  border-radius: 50%;
+  border: 2px solid #12d300;
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+}
+
+.about-me__content--title {
+  font-size: 3rem;
+  padding: 1rem 0;
+  color: white;
+  text-transform: uppercase;
+
+  position: relative;
+}
+
+.about-me__content--title:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0.3rem;
+  width: 10%;
+  background-color: var(--primary-color);
+  background-color: #12d300;
+}
+
+.about-me__content--title,
+.about-me__content--para {
+  margin-bottom: 4rem;
+  letter-spacing: 0.1rem;
+}
+
+.about-me__content--para {
+  font-size: 1.4rem;
+  color: white;
+}
+
+.languages-header-box {
+  padding: 5vh;
+  display: flex;
+  /* background-color: var(--secondary-color); */
+  justify-content: center;
+  align-items: center;
+}
+
+.languages-header {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 1000;
+  text-shadow: 2px 2px #12d300;
+  letter-spacing: .25rem;
+  color: var(--primary-color);
+  font-size: calc(1.75rem + 2vw);
+  
+}
+
+#language-container {
+  width: 100%;
+  background-color: #dad9e0;
+  background-image: url('https://cutewallpaper.org/21/css-background-patterns/15-Examples-Of-Subtle-Light-Pattern-Background.png');
+  display: flex;
+  justify-content: center;
+}
+
+#languages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #dad9e0;
+  background-image: url('https://cutewallpaper.org/21/css-background-patterns/15-Examples-Of-Subtle-Light-Pattern-Background.png');
+}
+
+.language-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.lang-card {
+  padding: 2rem;
+  flex-basis: 30rem;
+  flex-grow: 0;
+}
+
+.lang-card img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+
+  transition: filter 0.4s ease;
+  border-radius: 40px;
+}
+
+.lang-card img:hover, 
+.lang-card img:active {
+  filter: contrast(200%);
+}
+
+#contact {
+  height: calc(100vh - (2vw + 3vh));
+  background-size: 540px 360px;
+  background-position: 50% 5%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.success-message {
+  color: red;
+}
+
+.contact-header {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.25rem;
+  color: black;
+  font-size: calc(2rem + 3vw);
+  align-self: center;
+  text-shadow: 2px 2px #12d300;
+}
+
+.contact__form {
+  flex-basis: 40rem;
+  width: 10vw;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  opacity: .8;
+}
+
+
+
+.contact__form input, 
+.contact__form textarea {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  padding: 2rem;
+  background: transparent;
+  border: none;
+  border-bottom: var( --secondary-color) solid 0.1rem;
+  outline: 0;
+}
+
+.contact__form textarea {
+  height: 25vh;
+}
+
+input[type=submit] {
+  border: none;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 610px) {
+
+  #header {
+    position: absolute;
+  }
+
+  #header-main-nav {
+    position: fixed;
+    top: 0;
+    right: -30rem;
+    width: 30rem;
+    height: 100%;
+    background-color: var(--primary-color);
+    text-align: center;
+
+  }
+
+  .clicked {
+    left: 65%;
+  }
+
+  .header-main-nav--hamburger {
+    width: 5rem;
+    height: 5rem;
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    padding: 1rem;
+    border-radius: 50%;
+
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-around;
+  }
+
+  .line {
+    width: 100%;
+    height: 0.2rem;
+    background-color: white;
+    border-radius: 0.2rem;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .header-main-nav-links {
+    align-self: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .header-main-nav-links li {
+    margin-bottom: 4vh;
+    margin-left: 6vw;
+  }
+
+  .clicked .line-1 {
+    transform: rotateZ(-405deg) translate(-0.8rem, 0.6rem);
+  }
+
+  .clicked .line-2 {
+    opacity: 0;
+  }
+  
+  .clicked .line-3 {
+    transform: rotateZ(405deg) translate(-0.8rem, -0.6rem)
+  }
+
+  
+
+  #showcase {
+    background-position: 100%;
+    width: 100%;
+  }
+
+  #contact {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+}
+
+
+@media screen and (max-width: 1190px) {
+  #showcase {
+    height: 100vh;
+    background-image: url('images/a7DiccEQ.jpg');
+    background-size: cover;
+    background-position: 60%;
+    background-attachment: fixed;
+  
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 4rem;
+  }
+
+  .about-me__image-box,
+  .about-me__content {
+  flex-basis: 40rem;
+  padding: 3rem;
+  flex-grow: 0.20;
+}
+}
+
+@media screen and (max-width: 970px) {
+  #showcase {
+    height: 100vh;
+    background-image: url('images/a7DiccEQ.jpg');
+    background-size: cover;
+    background-position: 61%;
+    background-attachment: fixed;
+  
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .about-me__image {
+    border-radius: 50%;
+    width: 75%;
+    height: 75%;
+    object-fit: cover;
+  }
+} 
+/*********** Tablet ************/
+@media screen and (max-width: 1078px) {
+  .about-me__image {
+    border-radius: 50%;
+    width: 75%;
+    height: 75%;
+    object-fit: cover;
+  }
+
+  #contact {
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://cutewallpaper.org/21/css-background-patterns/15-Examples-Of-Subtle-Light-Pattern-Background.png');
+  }
+
+  .contact__form {
+    flex-basis: 40rem;
+    width: calc(35rem + 5vw);
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    opacity: .6;
+    justify-self: end;
+  }
+
+  .contact-header-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .contact-header {
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.25rem;
+    color: black;
+    font-size: calc(2rem + 3vw);
+    align-self: center;
+    text-shadow: 2px 2px #12d300;
+  }
+
+  .contact-header--para {
+    font-size: 1.5rem;
+    letter-spacing: 0.09rem;
+    font-weight: 600;
+  }
+}
+
+@media screen and (min-width: 1079px){
+  #contact {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://cutewallpaper.org/21/css-background-patterns/15-Examples-Of-Subtle-Light-Pattern-Background.png');
+  }
+
+  .contact__form {
+    flex-basis: 40rem;
+    width: calc(35rem + 5vw);
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    opacity: .6;
+    justify-self: end;
+  }
+
+  .contact-header-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 6rem;
+  }
+
+  .contact-header {
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.25rem;
+    color: black;
+    font-size: calc(3.5rem + 1vw);
+    align-self: center;
+    text-shadow: 2px 2px #12d300;
+  }
+
+  .contact-header--para {
+    font-size: 1.5rem;
+    letter-spacing: 0.09rem;
+    font-weight: 600;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  #showcase {
+    height: 100vh;
+    background-image: url('images/a7DiccEQ.jpg');
+    background-size: cover;
+    background-position: 65%;
+    background-attachment: fixed;
+  
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 4rem;
+  }
+
+  .logo {
+    font-family: "Rock Salt";
+    /* color: var(--primary-color); */
+    color: white;
+    font-size: calc(1rem + 0.25vw);
+    padding: 0;
+  }
+}
+
+
+@media screen and (min-width: 1670px) {
+  #showcase {
+    height: 100vh;
+    background-image: url('images/a7DiccEQ.jpg');
+    background-size: 2700px 1800px;
+    background-position: 50%;
+    background-attachment: fixed;
+    
+  
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+}
+
+
+@media screen and (min-width: 1500px) {
+
+  #about-me {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    /* align-items: center; */
+    flex-wrap: wrap;
+    padding: 2rem;
+    width: 107.14rem;
+  }
+
+  #projects {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem;
+    /* background-color: #dad9e0; */
+    width: 107.14rem;
+  }
+
+  #languages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem;
+    /* background-color: #dad9e0; */
+    width: 107.14rem;
+  }
+
+  #showcase {
+    height: 100vh;
+    background-image: url('images/a7DiccEQ.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+  }
+
+}
+
+
+/************ Contact Queries **************/
+
+
+/*************** Showcase ****************/
+@media screen and (min-width: 1200px) {
+
+  #showcase {
+    height: 100vh;
+    background-image: url('images/a7DiccEQ.jpg');
+    background-size: cover;
+    background-position: 35%;
+    background-attachment: fixed;
+  
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  #showcase {
+    height: 100vh;
+    background-image: url('images/a7DiccEQ.jpg');
+    background-size: cover;
+    background-position: 60%;
+    background-attachment: fixed;
+  
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+  }
+
+  #about-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100rem;
+
+    padding: 2rem;
+  }
+
+}
+
+@media screen and (min-width: 767px) {
+
+  #showcase {
+    height: calc(100vh - (3vh + 3vw));
+    background-image: url('images/a7DiccEQ.jpg');
+    background-size: cover;
+    background-position: 60%;
+    background-attachment: fixed;
+  
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 4rem;
+  }
+}
+
+/********************* MOBILE *************************/
+@media screen and (max-width: 500px) {
+
+  #showcase {
+    height: 100vh;
+    background-image: url('images/a7DiccEQ.jpg');
+    background-size: cover;
+    background-position: 69%;
+    background-attachment: fixed;
+  
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+  }
+
+  #contact {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background-image: url('https://cutewallpaper.org/21/css-background-patterns/15-Examples-Of-Subtle-Light-Pattern-Background.png');
+  }
+
+  .contact__form {
+    flex-basis: 40rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    opacity: .6;
+  }
+
+  .contact-header-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .contact-header {
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.25rem;
+    color: black;
+    font-size: calc(2rem + 3vw);
+    align-self: center;
+    text-shadow: 2px 2px #12d300;
+  }
+
+  .contact-header--para {
+    font-size: 1rem;
+    letter-spacing: 0.06rem;
+    font-weight: 600;
+  }
+
+  .fa-linkedin {
+    color: #006094;
+    transition: transform 0.3s;
+    font-size: 1.75rem;
+  }
+  
+  .fa-github {
+    color: #00a816;
+    transition: transform 0.3s;
+    font-size: 1.75rem;
+  }
+  
+  .fa-medium {
+    color: rgb(206, 206, 206);
+    transition: transform 0.3s;
+    font-size: 1.75rem;
+  }
+
+  .about-me__content {
+    padding: 1rem;
+  }
+
+  .about-me__content--para {
+    font-size: 1.2rem;
+    color: white;
+  }
+}
+
+/****** iphone 5e *********/
+@media screen and (max-width: 400px) and (max-height: 600px){
+  #contact {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background-image: url('https://cutewallpaper.org/21/css-background-patterns/15-Examples-Of-Subtle-Light-Pattern-Background.png');
+  }
+
+  .contact__form {
+    flex-basis: 40rem;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    opacity: .6;
+  }
+
+  .contact__form input {
+    height: 3rem;
+  }
+
+  .contact-header-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .contact-header {
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.25rem;
+    color: black;
+    font-size: calc(2rem + 1vw);
+    align-self: center;
+    text-shadow: 2px 2px #12d300;
+  }
+
+  .contact-header--para {
+    font-size: 1rem;
+    letter-spacing: 0.04rem;
+    font-weight: 600;
+  }
+}
+
+/* Larger screens */
+@media screen and (min-width: 1300px) {
+  #about-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: calc(100rem + 10vw);
+
+    padding: 2rem;
+  }
+
+  .about-me__content {
+    flex-basis: 50rem;
+    color: white;
+  }
+}
