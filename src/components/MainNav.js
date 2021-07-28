@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import ToolboxCarousel from './ToolboxCarousel';
 import emailjs from 'emailjs-com';
 import { useForm } from "react-hook-form";
 import { Link } from 'react-scroll';
 import brooklynBridgePark from '../images/BBP_shot.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { AiFillGithub } from '@fortawesome/free-brands-svg-icons';
+
 
 
 
@@ -88,7 +90,7 @@ function MainNav(){
                         <li><Link offset={-110} smooth={true} to="showcase" href="#">Home</Link></li>
                         <li><Link offset={-62} smooth={true} to="about-me" href="#">About</Link></li>
                         <li><Link offset={-100} smooth={true} to="projects-container" href="#">Projects</Link></li>
-                        <li><Link offset={-80} smooth={true} to="languages" href="#">Languages</Link></li>
+                        <li><Link offset={-80} smooth={true} to="toolbox" href="#">Toolbox</Link></li>
                         <li><Link offset={-62} smooth={true} to="contact" href="#">Contact</Link></li>
                         <li><Link offset={-110} class="resume-select" href="#"> Resume </Link></li>
                     </ul>    
@@ -158,7 +160,7 @@ function MainNav(){
                 </section>
             </section>
 
-            <section id="language-container">
+            {/* <section id="language-container">
                 <section id="languages">
                     <h1 class="section-headers"> Tool Box </h1>
 
@@ -184,6 +186,14 @@ function MainNav(){
                         </div>
                     </div>
                 </section>
+            </section> */}
+            <section id="toolbox">
+                <h1 class="section-headers"> TOOL BOX </h1>
+                <div class="toolbox-container">
+                    <div class="toolbox-content"> 
+                        <ToolboxCarousel />
+                    </div>
+                </div>
             </section>
 
             <section id="contact">

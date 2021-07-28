@@ -63,6 +63,15 @@ body {
   line-height: 1.8;
 
   display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 #side-nav {
@@ -168,16 +177,10 @@ body {
   transform: translateY(-10px);
 }
 
-/*********** Main content  *************/
-main {
-  flex: 1;
-}
-
 /********** Main Nav Header  **********/
 #header {
   background-color: var(--primary-color);
   height: calc(2vw + 3vh);
-  /* width: calc(100vw - (3vw + 3vh)); */
   top: 0;
   position: sticky;
   z-index: 2;
@@ -221,11 +224,6 @@ main {
   font-size: calc(1rem + 0.25vw);
 }
 
-/* .resume-select {
-  border: white solid 2px;
-  border-radius: 8px;
-} */
-
 .header-main-nav-links li a:link::before, 
 .header-main-nav-links li a:visited::before,
 .header-main-nav-links li a:link::after, 
@@ -266,10 +264,15 @@ main {
   width: 100%;
 }
 
+main {
+  flex: 1;
+}
+
+/******************* SHOWCASE *******************/
 
 #showcase {
   height: calc(100vh - (2vw + 3vh));
-  background-image: url('images/a7DiccEQ.jpg');
+  background-image: url('images/Cam.FINAL.7.15.21\ IG-1.jpg');
   background-size: cover;
   background-position: 40%;
   background-attachment: fixed;
@@ -353,6 +356,8 @@ main {
   transform-origin: left;
 }
 
+/******************* PROJECTS **********************/
+
 .projects-header-box {
   padding: 5vh;
   display: flex;
@@ -368,6 +373,7 @@ main {
   font-size: calc(1.75rem + 2vw);
   align-self: center;
   text-shadow: 2px 2px #12d300;
+  text-transform: uppercase;
   font-weight: 1100;
 }
 
@@ -431,6 +437,8 @@ main {
   transition: 0.4s ease-in-out;
 }
 
+
+/**************** ABOUT ME  ***********************/
 .about-me-wrapper {
   width: calc(100vw - (3vw + 3vh));
   /* background: linear-gradient(0deg, rgba(218,217,224,1) 0%, rgba(225,221,253,1) 6%); */
@@ -497,60 +505,61 @@ main {
   color: white;
 }
 
-.languages-header-box {
-  padding: 5vh;
+
+/*********************** TOOL BOX **************************/
+#toolbox {
+  width: 100%;
   display: flex;
-  /* background-color: var(--secondary-color); */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-#language-container {
+.toolbox-container {
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
-#languages {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 2rem;
-  background-color: #dad9e0;
-  background-image: url('https://cutewallpaper.org/21/css-background-patterns/15-Examples-Of-Subtle-Light-Pattern-Background.png');
-}
-
-.language-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 2rem;
-}
-
-.lang-card {
-  padding: 2rem;
-  flex-basis: 30rem;
+.toolbox-content {
   flex-grow: 0;
 }
 
-.lang-card img {
+#toolbox h1 {
+  margin-bottom: 2rem;
+}
+
+.tool-image {
   height: 100%;
-  width: 100%;
   object-fit: cover;
-
-  transition: filter 0.4s ease;
-  border-radius: 40px;
 }
 
-.lang-card img:hover, 
-.lang-card img:active {
-  filter: contrast(200%);
+
+.carousel-root {
+  width: calc(15rem + 35vw);
 }
+
+.slide {
+  height: calc(10rem + 10vw) ;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+
+.thumb img {
+  height: 100%;
+  object-fit: cover;
+  border: 1rem;
+  border: none;
+}
+
+
+ 
+/***************** CONTACT *********************/
 
 #contact {
   height: calc(100vh - (2vw + 3vh));
-  background-size: 540px 360px;
-  background-position: 50% 5%;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -599,10 +608,12 @@ input[type=submit] {
   display: flex; 
   align-items: center;
   justify-content: center;
+  margin-top: calc(1.5rem + 1vw);
 }
 
 .footer-content {
   letter-spacing: .1rem;
+  font-size: calc(.75rem + .10vw);
 }
 
 @media screen and (max-width: 610px) {
@@ -692,9 +703,6 @@ input[type=submit] {
 
 @media screen and (max-width: 1190px) {
   #showcase {
-    height: 100vh;
-    background-image: url('images/a7DiccEQ.jpg');
-    background-size: cover;
     background-position: 60%;
     background-attachment: fixed;
   
@@ -714,15 +722,7 @@ input[type=submit] {
 
 @media screen and (max-width: 970px) {
   #showcase {
-    height: 100vh;
-    background-image: url('images/a7DiccEQ.jpg');
-    background-size: cover;
     background-position: 61%;
-    background-attachment: fixed;
-  
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
   }
 
   .about-me__image {
@@ -732,6 +732,8 @@ input[type=submit] {
     object-fit: cover;
   }
 } 
+
+
 /*********** Tablet ************/
 @media screen and (max-width: 1078px) {
   .about-me__image {
@@ -747,7 +749,7 @@ input[type=submit] {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url('https://cutewallpaper.org/21/css-background-patterns/15-Examples-Of-Subtle-Light-Pattern-Background.png');
+    
   }
 
   .contact__form {
@@ -791,7 +793,7 @@ input[type=submit] {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url('https://cutewallpaper.org/21/css-background-patterns/15-Examples-Of-Subtle-Light-Pattern-Background.png');
+
   }
 
   .contact__form {
@@ -831,7 +833,6 @@ input[type=submit] {
 @media screen and (max-width: 830px) {
   #showcase {
     height: 100vh;
-    background-image: url('images/a7DiccEQ.jpg');
     background-size: cover;
     background-position: 65%;
     background-attachment: fixed;
@@ -855,7 +856,6 @@ input[type=submit] {
 @media screen and (min-width: 1670px) {
   #showcase {
     height: 100vh;
-    background-image: url('images/a7DiccEQ.jpg');
     background-size: 2700px 1800px;
     background-position: 50%;
     background-attachment: fixed;
@@ -888,36 +888,10 @@ input[type=submit] {
     flex-wrap: wrap;
     justify-content: center;
     padding: 2rem;
-    /* background-color: #dad9e0; */
     width: 107.14rem;
   }
-
-  #languages {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 2rem;
-    /* background-color: #dad9e0; */
-    width: 107.14rem;
-  }
-
-  #showcase {
-    height: 100vh;
-    background-image: url('images/a7DiccEQ.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-  
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    
-  }
-
 }
 
-
-/************ Contact Queries **************/
 
 
 /*************** Showcase ****************/
@@ -925,7 +899,6 @@ input[type=submit] {
 
   #showcase {
     height: 100vh;
-    background-image: url('images/a7DiccEQ.jpg');
     background-size: cover;
     background-position: 35%;
     background-attachment: fixed;
@@ -940,7 +913,6 @@ input[type=submit] {
 @media screen and (min-width: 1000px) {
   #showcase {
     height: 100vh;
-    background-image: url('images/a7DiccEQ.jpg');
     background-size: cover;
     background-position: 60%;
     background-attachment: fixed;
@@ -967,7 +939,6 @@ input[type=submit] {
 
   #showcase {
     height: calc(100vh - (3vh + 3vw));
-    background-image: url('images/a7DiccEQ.jpg');
     background-size: cover;
     background-position: 60%;
     background-attachment: fixed;
@@ -984,10 +955,8 @@ input[type=submit] {
 
   #showcase {
     height: 100vh;
-    background-image: url('images/a7DiccEQ.jpg');
     background-size: cover;
-    background-position: 69%;
-    background-attachment: fixed;
+    background-position: 72%;
   
     display: flex;
     justify-content: flex-start;
@@ -995,13 +964,14 @@ input[type=submit] {
     
   }
 
+
   #contact {
     height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    background-image: url('https://cutewallpaper.org/21/css-background-patterns/15-Examples-Of-Subtle-Light-Pattern-Background.png');
+    margin-top: 2rem;
   }
 
   .contact__form {
@@ -1064,7 +1034,7 @@ input[type=submit] {
   }
 
   #footer {
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
 
   .footer-content {
@@ -1081,7 +1051,6 @@ input[type=submit] {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    background-image: url('https://cutewallpaper.org/21/css-background-patterns/15-Examples-Of-Subtle-Light-Pattern-Background.png');
   }
 
   .contact__form {
@@ -1137,4 +1106,7 @@ input[type=submit] {
   .about-me__content {
     flex-basis: 50rem;
   }
+
+
 }
+
