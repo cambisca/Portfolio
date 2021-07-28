@@ -135,7 +135,7 @@ function MainNav(){
 
             <section className="projects-container">
                 <section id="projects">
-                    <h1 class="projects-header"> My Apps </h1>
+                    <h1 class="section-headers"> My Apps </h1>
                     <div class="project-list">
                         <div className="project__card">
                             {/* <h1 className="text-uppercase text-center py-5">I Got Next</h1> */}
@@ -160,7 +160,7 @@ function MainNav(){
 
             <section id="language-container">
                 <section id="languages">
-                    <h1 class="languages-header"> Tool Box </h1>
+                    <h1 class="section-headers"> Tool Box </h1>
 
                     <div class="language-list">
                         <div class="lang-card lang-1">
@@ -188,7 +188,7 @@ function MainNav(){
 
             <section id="contact">
                 <div class="contact-header-box">
-                    <h1 class="contact-header"> Give me a shout </h1>
+                    <h1 class="section-headers"> Give me a shout </h1>
                     <p class="contact-header--para"> Fill out the form and I'll get back to you ASAP! </p>
                 </div>
 

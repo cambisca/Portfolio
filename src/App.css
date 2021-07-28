@@ -360,14 +360,14 @@ main {
   align-items: center;
 }
 
-.projects-header {
+.section-headers {
   font-family: 'Roboto', sans-serif;
   letter-spacing: 0.25rem;
   color: black;
   font-size: calc(1.75rem + 2vw);
   align-self: center;
   text-shadow: 2px 2px #12d300;
-  
+  font-weight: 1100;
 }
 
 .projects-container {
@@ -506,16 +506,6 @@ main {
   align-items: center;
 }
 
-.languages-header {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 1000;
-  text-shadow: 2px 2px #12d300;
-  letter-spacing: .25rem;
-  color: var(--primary-color);
-  font-size: calc(1.75rem + 2vw);
-  
-}
-
 #language-container {
   width: 100%;
   background-color: #dad9e0;
@@ -573,14 +563,7 @@ main {
   color: red;
 }
 
-.contact-header {
-  font-family: 'Roboto', sans-serif;
-  letter-spacing: 0.25rem;
-  color: black;
-  font-size: calc(2rem + 3vw);
-  align-self: center;
-  text-shadow: 2px 2px #12d300;
-}
+
 
 .contact__form {
   flex-basis: 40rem;
