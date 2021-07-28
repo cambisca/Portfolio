@@ -160,7 +160,7 @@ function MainNav(){
 
             <section id="language-container">
                 <section id="languages">
-                    <h1 class="languages-header"> Technologies </h1>
+                    <h1 class="languages-header"> Tool Box </h1>
 
                     <div class="language-list">
                         <div class="lang-card lang-1">
