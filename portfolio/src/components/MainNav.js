@@ -135,7 +135,7 @@ function MainNav(){
 
             <section className="projects-container">
                 <section id="projects">
-                    <h1 class="projects-header"> Projects </h1>
+                    <h1 class="projects-header"> My Apps </h1>
                     <div class="project-list">
                         <div className="project__card">
                             {/* <h1 className="text-uppercase text-center py-5">I Got Next</h1> */}
@@ -157,7 +157,6 @@ function MainNav(){
                     </div>
                 </section>
             </section>
-
 
             <section id="language-container">
                 <section id="languages">
@@ -188,6 +187,10 @@ function MainNav(){
             </section>
 
             <section id="contact">
+                <div class="contact-header-box">
+                    <h1 class="contact-header"> Give me a shout </h1>
+                    <p class="contact-header--para"> Fill out the form and I'll get back to you ASAP! </p>
+                </div>
 
                 <form class="contact__form" onSubmit={handleSubmit(onSubmit)}>
                 <span class="success-message"> { visible ? successMessage : null } </span>
@@ -242,7 +245,7 @@ function MainNav(){
                         {errors.message && errors.message.message} 
                     </span> 
                     
-                    <input type="submit" value="Submit" />
+                    <input class="contact-form-submit" type="submit" value="Submit" />
                 </form>
             </section>
         </main>
