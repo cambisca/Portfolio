@@ -11,6 +11,7 @@
   font-size: 12px;
   height: 100%;
   width: 100%;
+  background-image: url('https://cutewallpaper.org/21/css-background-patterns/15-Examples-Of-Subtle-Light-Pattern-Background.png');
 
   /* custom properties */
   /* main color  */
@@ -134,7 +135,7 @@ body {
 .fa-linkedin {
   color: #006094;
   transition: transform 0.3s;
-  font-size: 2.5rem;
+  font-size: calc(1.25rem + 1vw);
 }
 
 .fa-linkedin:hover,
@@ -146,7 +147,7 @@ body {
 .fa-github {
   color: #00a816;
   transition: transform 0.3s;
-  font-size: 2.5rem;
+  font-size: calc(1.25rem + 1vw);
 }
 
 .fa-github:hover, 
@@ -158,7 +159,7 @@ body {
 .fa-medium {
   color: rgb(206, 206, 206);
   transition: transform 0.3s;
-  font-size: 3rem;
+  font-size: calc(1.25rem + 1vw);
 }
 
 .fa-medium:hover,
@@ -372,8 +373,6 @@ main {
 
 .projects-container {
   width: 100%;
-  background-color: #dad9e0;
-  background-image: url('https://cutewallpaper.org/21/css-background-patterns/15-Examples-Of-Subtle-Light-Pattern-Background.png');
   display: flex;
   justify-content: center;
 }
@@ -508,8 +507,6 @@ main {
 
 #language-container {
   width: 100%;
-  background-color: #dad9e0;
-  background-image: url('https://cutewallpaper.org/21/css-background-patterns/15-Examples-Of-Subtle-Light-Pattern-Background.png');
   display: flex;
   justify-content: center;
 }
@@ -597,6 +594,16 @@ input[type=submit] {
   cursor: pointer;
 }
 
+#footer {
+  width: calc(100vw - (3vw + 3vh));
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-content {
+  letter-spacing: .1rem;
+}
 
 @media screen and (max-width: 610px) {
 
@@ -1054,6 +1061,15 @@ input[type=submit] {
   .about-me__content--para {
     font-size: 1.2rem;
     color: white;
+  }
+
+  #footer {
+    margin-top: 1rem;
+  }
+
+  .footer-content {
+    letter-spacing: .1rem;
+    font-size: .8rem;
   }
 }
 

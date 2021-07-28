@@ -248,6 +248,12 @@ function MainNav(){
                     <input class="contact-form-submit" type="submit" value="Submit" />
                 </form>
             </section>
+
+            <section id="footer">
+                <div class="footer-box"> 
+                        <h3 class="footer-content"> COPYRIGHT © 2021 CAMERON BISCA | ALL RIGHTS RESERVED </h3>
+                </div>
+            </section>
         </main>
     )
 }
