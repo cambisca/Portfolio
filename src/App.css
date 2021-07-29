@@ -409,8 +409,8 @@ main {
   justify-content: center;
   align-items: center;
   margin: 1rem;
+  box-shadow: 4px 8px 5px -1px rgb(177, 177, 177);
 }
-
 
 .project__card img {
   height: 100%;
@@ -539,7 +539,7 @@ main {
 
 
 .carousel-root {
-  width: 80%;
+  width: calc(20rem + 15vw);
   border: 3px solid black;
   border-radius: 8px;
   background: #eee;

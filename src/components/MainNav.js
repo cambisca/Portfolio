@@ -4,6 +4,7 @@ import emailjs from 'emailjs-com';
 import { useForm } from "react-hook-form";
 import { Link } from 'react-scroll';
 import brooklynBridgePark from '../images/BBP_shot.jpg';
+import i_got_next from '../images/I-GOT-NEXT.jpeg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { AiFillGithub } from '@fortawesome/free-brands-svg-icons';
 
@@ -142,7 +143,7 @@ function MainNav(){
                         <div className="project__card">
                             {/* <h1 className="text-uppercase text-center py-5">I Got Next</h1> */}
                             
-                            <img className="portfolio-image" src={brooklynBridgePark} alt="I Got Next project" />
+                            <img className="portfolio-image" src={i_got_next} alt="I Got Next project" />
                             <div class="overflow"> 
                                 {/* <FontAwesomeIcon icon={faSearchPlus}/> */}
                             </div>
