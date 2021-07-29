@@ -13,9 +13,6 @@ function ToolboxCarousel(){
             interval={3000}
         >
             <>
-                <img class="tool-image" src="https://res.cloudinary.com/practicaldev/image/fetch/s--jvDLhx0b--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/cpcr5w0kgl6j94tss7n9.png" alt="Ruby on Rails"></img>
-            </>
-            <>
                 <img class="tool-image" src="https://sisnolabs.com/blog/wp-content/uploads/2020/09/reactjs.png" alt="React"/>
             </>
             <>
@@ -26,6 +23,10 @@ function ToolboxCarousel(){
             </>
             <>
                 <img class="tool-image" src="https://allvectorlogo.com/img/2016/04/css3-logo.png" alt="CSS"/>
+            </>
+
+            <>
+                <img class="tool-image" src="https://res.cloudinary.com/practicaldev/image/fetch/s--jvDLhx0b--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/cpcr5w0kgl6j94tss7n9.png" alt="Ruby on Rails"></img>
             </>
         </Carousel>
     )

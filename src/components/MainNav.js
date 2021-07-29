@@ -137,7 +137,7 @@ function MainNav(){
 
             <section className="projects-container">
                 <section id="projects">
-                    <h1 class="section-headers"> My Apps </h1>
+                    <h1 class="section-headers"> My Work </h1>
                     <div class="project-list">
                         <div className="project__card">
                             {/* <h1 className="text-uppercase text-center py-5">I Got Next</h1> */}
