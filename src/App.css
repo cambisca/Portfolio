@@ -284,6 +284,14 @@ main {
   align-items: flex-start;
 }
 
+@media screen and (max-width: 600px) and (min-width: 300px) {
+
+  #showcase {
+    
+    
+  }
+}
+
 #showcase__content {
   background-color: rgba(253, 252, 252, 0);
   padding: 0;
@@ -687,10 +695,10 @@ input[type=submit] {
 
   
 
-  #showcase {
+  /* #showcase {
     background-position: 100%;
     width: 100%;
-  }
+  } */
 
   #contact {
     height: 100vh;
@@ -702,7 +710,7 @@ input[type=submit] {
 
 
 @media screen and (max-width: 1190px) {
-  #showcase {
+  /* #showcase {
     background-position: 60%;
     background-attachment: fixed;
   
@@ -710,7 +718,7 @@ input[type=submit] {
     justify-content: flex-start;
     align-items: flex-start;
     padding: 4rem;
-  }
+  } */
 
   .about-me__image-box,
   .about-me__content {
@@ -721,9 +729,9 @@ input[type=submit] {
 }
 
 @media screen and (max-width: 970px) {
-  #showcase {
+  /* #showcase {
     background-position: 61%;
-  }
+  } */
 
   .about-me__image {
     border-radius: 50%;
@@ -831,7 +839,7 @@ input[type=submit] {
 }
 
 @media screen and (max-width: 830px) {
-  #showcase {
+  /* #showcase {
     height: 100vh;
     background-size: cover;
     background-position: 65%;
@@ -841,7 +849,7 @@ input[type=submit] {
     justify-content: flex-start;
     align-items: flex-start;
     padding: 4rem;
-  }
+  } */
 
   .logo {
     font-family: "Rock Salt";
@@ -951,19 +959,17 @@ input[type=submit] {
 }
 
 /********************* MOBILE *************************/
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
 
-  #showcase {
+  /* #showcase {
     height: 100vh;
-    max-width: 100%;
-    background-size: cover;
-    background-position: 72%;;
-  
+    background-image: url('images/1F330AF7-238C-4790-BDD4-1B43450DCDE8_1_105_c.jpeg');
     display: flex;
+    background-position: 72%;
     justify-content: flex-start;
     align-items: flex-start;
     
-  }
+  } */
 
 
   #contact {
