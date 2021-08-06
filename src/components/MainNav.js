@@ -3,7 +3,10 @@ import ToolboxCarousel from './ToolboxCarousel';
 import emailjs from 'emailjs-com';
 import { useForm } from "react-hook-form";
 import { Link } from 'react-scroll';
-import brooklynBridgePark from '../images/BBP_shot.jpg';
+import discourse from '../images/Discourse.jpeg';
+import discourseChat from '../images/Discourse-chat.jpeg';
+import discourseSignin from '../images/Discourse-signin.jpeg';
+import discourseProfile from '../images/Discourse-profile.jpeg';
 import i_got_next from '../images/I-GOT-NEXT.jpeg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { AiFillGithub } from '@fortawesome/free-brands-svg-icons';
@@ -115,7 +118,7 @@ function MainNav(){
                     <div class="about-me__content">
                         <h2 class="about-me__content--title"> About Me </h2>
                         <p class="about-me__content--para"> 
-                            Yo! I'm Cameron but I usually go by Cam. I am a Brooklyn boy and software engineer with a passion for expressive front end development. 
+                            Yo! I'm Cameron but I usually go by Cam. I am a Brooklyn boy and software engineer with a passion for creative frontend development. 
                             
                             <br/>
                             <br/>
@@ -125,69 +128,77 @@ function MainNav(){
                             <br/>
                             <br/>
 
-                            This kind of education led me to where I am present day. Today, I aim to build applications that are not only useful but expressive and in adjustment. 
+                            Today, I aim to build applications that are not only useful but expressive and in adjustment. 
 
                             <br/>
                             <br/>
 
-                            When I've logged off you can find me on a basketball court, in a theatre, music venue, cocktail bar or hiking trail :) 
+                            When I've logged off you can find me on a basketball court, hiking trail, in a theatre, music venue, or cocktail bar :) 
                         </p>
                     </div>
                 </section>
             </section>
 
             <section className="projects-container">
-                <section id="projects">
+                <div id="projects">
                     <h1 class="section-headers"> My Work </h1>
                     <div class="project-list">
-                        <div className="project__card">
-                            {/* <h1 className="text-uppercase text-center py-5">I Got Next</h1> */}
-                            
+                        <div className="project__card"> 
                             <img className="portfolio-image" src={i_got_next} alt="I Got Next project" />
+
                             <div class="overflow"> 
-                                {/* <FontAwesomeIcon icon={faSearchPlus}/> */}
+                                <div class="project-description-box">
+                                    <p class="project-description"> 
+                                        I GOT NEXT provides real time activity for basketball courts so users can find a court that fits their needs on a given day. 
+                                    </p>
+                                </div>
+                                <div class="project-links-box"> 
+                                    <span> 
+                                        <a class="project-link" href="https://github.com/cambisca/I-got-next-front"> Frontend </a> 
+                                    </span>
+
+                                    <span> 
+                                        <a class="project-link" href="https://github.com/cambisca/I-got-next-back"> Backend </a> 
+                                    </span>
+
+                                    <span> 
+                                        <a class="project-link" href="https://www.loom.com/share/c0c70984952141d5805377f34aaedb1b"> Demo </a> 
+                                    </span>
+                                </div>
                             </div>
                            
                         </div>
 
                         <div className="project__card">
-                            {/* <h1 className="text-uppercase text-center py-5">Discourse</h1> */}
+                            <img className="portfolio-image" src={discourse} alt="Discourse project"/>
                             
-                            <img className="portfolio-image" src={brooklynBridgePark} alt="Discourse project"/>
-                            <div class="overflow"> </div>
+                            <div class="overflow"> 
+                                <div class="project-description-box">
+                                    <p class="project-description"> 
+                                        A chatting app that encourages meaningul discourse between people who have common interests yet differing beliefs. 
+                                    </p>
+                                </div>
+                                <div class="project-links-box"> 
+                                    <span> 
+                                        <a class="discourse-link project-link" href="https://github.com/jpersons24/discourse/tree/main/discourse-react"> Frontend </a> 
+                                    </span>
+                                    |
+                                    <span> 
+                                        <a class="discourse-link project-link" href="https://github.com/jpersons24/discourse-rails/tree/771dd677f37de567ac36dae6d9c704d1475992ce"> Backend </a> 
+                                    </span>
+                                    |
+                                    <span> 
+                                        <a class="discourse-link project-link" href="https://discourseapp.netlify.app/"> Site </a> 
+                                    </span>
+                                </div>
+                            </div>
                             
                         </div>
                     </div>
-                </section>
+                </div>
             </section>
 
-            {/* <section id="language-container">
-                <section id="languages">
-                    <h1 class="section-headers"> Tool Box </h1>
-
-                    <div class="language-list">
-                        <div class="lang-card lang-1">
-                            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--jvDLhx0b--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/cpcr5w0kgl6j94tss7n9.png" alt="Ruby on Rails"/>
-                        </div>
-
-                        <div class="lang-card lang-2">
-                            <img src="https://sisnolabs.com/blog/wp-content/uploads/2020/09/reactjs.png" alt="React"/>
-                        </div>
-
-                        <div class="lang-card lang-3">
-                            <img src="https://techvccloud.mediacdn.vn/zoom/650_406/2018/11/23/js-15429579443112042672363-crop-1542957949936317424252.png" alt="JavaScript"/>
-                        </div>
-
-                        <div class="lang-card lang-4">
-                            <img src="https://pixelmechanics.com.sg/wp-content/uploads/2019/06/html5-logo-for-web-development.png" alt="HTML"/>
-                        </div>
-
-                        <div class="lang-card lang-5">
-                            <img src="https://allvectorlogo.com/img/2016/04/css3-logo.png" alt="CSS"/>
-                        </div>
-                    </div>
-                </section>
-            </section> */}
+            
             <section id="toolbox">
                 <h1 class="section-headers"> TOOL BOX </h1>
                 <div class="toolbox-container">
