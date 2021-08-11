@@ -4,13 +4,7 @@ import emailjs from 'emailjs-com';
 import { useForm } from "react-hook-form";
 import { Link } from 'react-scroll';
 import discourse from '../images/Discourse.jpeg';
-import discourseChat from '../images/Discourse-chat.jpeg';
-import discourseSignin from '../images/Discourse-signin.jpeg';
-import discourseProfile from '../images/Discourse-profile.jpeg';
 import i_got_next from '../images/I-GOT-NEXT.jpeg'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { AiFillGithub } from '@fortawesome/free-brands-svg-icons';
-
 
 
 
@@ -78,6 +72,15 @@ function MainNav(){
           setVisible(false);
         }, 4000);
     };
+
+    const randomRgb = () => {
+        const red = Math.floor(Math.random() * 256) 
+        const green = Math.floor(Math.random() * 256) 
+        const blue = Math.floor(Math.random() * 256) 
+
+        return `rgb(${red}, ${green}, ${blue})`
+    }
+
     
 
     return (
@@ -91,12 +94,70 @@ function MainNav(){
                     </div> 
                         
                     <ul class="header-main-nav-links">
-                        <li><Link offset={-110} smooth={true} to="showcase" href="#">Home</Link></li>
-                        <li><Link offset={-62} smooth={true} to="about-me" href="#">About</Link></li>
-                        <li><Link offset={-100} smooth={true} to="projects-container" href="#">Projects</Link></li>
-                        <li><Link offset={-80} smooth={true} to="toolbox" href="#">Toolbox</Link></li>
-                        <li><Link offset={-62} smooth={true} to="contact" href="#">Contact</Link></li>
-                        <li><Link offset={-110} class="resume-select" href="#"> Resume </Link></li>
+                        <li>
+                            <Link 
+                                offset={-110} 
+                                smooth={true} 
+                                to="showcase" 
+                                href="#"
+                            >
+                                Home
+                            </Link>
+                        </li>
+
+                        <li>
+                            <Link 
+                                offset={-62} 
+                                smooth={true} 
+                                to="about-me" 
+                                href="#"
+                            >
+                                About
+                            </Link>
+                        </li>
+
+                        <li>
+                            <Link 
+                                offset={-100} 
+                                smooth={true} 
+                                to="projects-container" 
+                                href="#"
+                            >
+                                Projects
+                            </Link>
+                        </li>
+
+                        <li>
+                            <Link 
+                                offset={-80} 
+                                smooth={true} 
+                                to="toolbox" 
+                                href="#"
+                            >
+                                Toolbox
+                            </Link>
+                        </li>
+
+                        <li>
+                            <Link 
+                                offset={-62} 
+                                smooth={true} 
+                                to="contact" 
+                                href="#"
+                            >
+                                Contact
+                            </Link>
+                        </li>
+
+                        <li>
+                            <a 
+                                offset={-110} 
+                                class="resume-select" 
+                                href="#"
+                            > 
+                                Resume 
+                            </a>
+                        </li>
                     </ul>    
                 </nav>
             </header>
@@ -208,7 +269,7 @@ function MainNav(){
                 </div>
             </section>
 
-            <section id="contact">
+            {/* <section id="contact">
                 <div class="contact-header-box">
                     <h1 class="section-headers"> Give me a shout </h1>
                     <p class="contact-header--para"> Fill out the form and I'll get back to you ASAP! </p>
@@ -267,7 +328,66 @@ function MainNav(){
                         {errors.message && errors.message.message} 
                     </span> 
                     
-                    <input class="contact-form-submit" type="submit" value="Submit" />
+                    <input type="submit" value="submit" />
+                </form> 
+            </section>*/}
+            <section id="contact">
+                <div class="contact-header-box">
+                    <h1 class="section-headers"> Give me a shout </h1>
+                    <p class="contact-header--para"> Fill out the form and I'll get back to you ASAP! </p>
+                </div>
+
+                <form class="contact__form" class="contact__form" onSubmit={handleSubmit(onSubmit)}>
+                    <input 
+                        type="text" 
+                        placeholder="Name"
+                        {
+                            ...register('name', { required: "Please enter your name" })
+                        }
+                    />
+                    <span class="error-message"> 
+                        {errors.name && errors.name.message} 
+                    </span> 
+
+                    <input 
+                        type="email" 
+                        placeholder="Email"
+                        {...register("email", {
+                            required: "Please provide your email",
+                            pattern: {
+                              value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                              message: "Invalid email format",
+                            },
+                        })}
+                    />
+                    <span class="error-message"> 
+                        {errors.email && errors.email.message} 
+                    </span> 
+                
+                    <input 
+                        type="text" 
+                        placeholder="Subject"
+                        {
+                            ...register('subject', { required: "Please enter a subject" })
+                        }
+                    />
+                    <span class="error-message"> 
+                        {errors.subject && errors.subject.message} 
+                    </span>
+                    
+                    <textarea 
+                        type="message"
+                        name="message" 
+                        placeholder="Leave a message"
+                        {
+                            ...register('message', { required: "Please enter your message " })
+                        }
+                    ></textarea>
+                    <span class="error-message"> 
+                        {errors.message && errors.message.message} 
+                    </span> 
+
+                    <input type="submit" value="submit" />
                 </form>
             </section>
 
