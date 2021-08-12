@@ -172,7 +172,7 @@ section {
   font-family: 'Mitr', sans-serif;
   letter-spacing: 0.25rem;
   color: black;
-  font-size: calc(1.75rem + 2vw);
+  font-size: calc(1.75rem + 1.5vw);
   align-self: center;
   text-shadow: 3px 3px #12d300;
   text-transform: uppercase;
@@ -229,13 +229,20 @@ section {
 
 .resume-select {
   border: white solid 2px;
+  background-color: black;
+  color: white;
   border-radius: 8px;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  padding: .5rem;
+  letter-spacing: .15rem;
 }
 
 .resume-select:hover {
-  background-color: #12d300;
-  color: black;
-  border: black solid 2px;
+  background-color: #12d300b5;
+  transition: all 0.3s ease-in-out;
+  
 }
 
 .header-main-nav-links li a:link::before, 
@@ -247,7 +254,6 @@ section {
  left: 0;
  width: 100%;
  height: 0.25rem;
- /* background-color: #12d300; */
  background-color: #12d300;
 
  transform: scaleX(0);
@@ -367,10 +373,11 @@ section {
   transform-origin: left;
 }
 
+/********* Projects  *************/
+
 .projects-header-box {
   padding: 5vh;
   display: flex;
-  background-color: var(--secondary-color);
   justify-content: center;
   align-items: center;
 }
@@ -408,79 +415,113 @@ section {
 
 .project__card {
   position: relative;
-  flex-grow: 0;
   height: calc(13rem + 8vw);
   width: calc(13rem + 8vw);
-  justify-content: center;
-  align-items: center;
   margin: 1rem;
-  box-shadow: 4px 8px 5px -1px rgb(177, 177, 177);
+  overflow: hidden;
 }
-
 
 .project__card img {
+  flex-grow: 0;
   height: 100%;
   width: 100%;
+  border-radius: 8px;
   object-fit: cover;
 
-  transition: filter 0.6s ease;
+  transition: all 0.75s;
 }
 
-
-.overflow {
-  display: grid;
-  grid-template-rows: 5fr 1fr;
+.project__card:before {
+  content: "";
   position: absolute;
-  opacity: 0;
-  height: 100%;
-  width: 100%;
   top: 0;
-  cursor: pointer;
+  left: 0;
+  width: 150%;
+  height: 150%;
+  background-color: #2d3436;
+  opacity: 0.9;
+  transition: all 0.45s;
+  transform: translate(100%, 100%) rotate(0deg);
 }
 
-.project-description-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.project__card:hover:before {
+  transform: translate(-65px, -75px) rotate(45deg);
+}
+
+.caption {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
 
-}
-
-.project-description {
   display: flex;
-  flex-wrap: wrap;
-  padding: .5rem;
-  border-radius: .5rem;
-  width: 85%;
-  background: white;
-  color: rgb(70, 70, 70);
+  flex-direction: column;
+  justify-content: space-around;
+  color: white;
+  text-transform: uppercase;
 }
 
-.project-links-box {
+.caption h2 {
+  text-align: center;
+  padding: 1.25rem;
+  margin-top: 1.5rem;
+  background-color: rgb(0, 0, 0, 0.8);
+  transform: translate(275px, -150px);
+  transition: all 0.45s;
+}
+
+.caption:hover h2 {
+  transform: translate(0px, 0px);
+}
+
+.project__card:hover h2 {
+  transform: translate(0px, 0px);
+  transition-delay: 0.3s;
+}
+
+.caption p {
+  width: 90%;
+  font-size: 1.15rem;
+  letter-spacing: 0.05rem;
+  align-self: center;
+  text-align: center;
+  transition: all 0.45s;
+  transform: translate(-200px, 200px)
+}
+
+.caption:hover p {
+  transform: translate(0px, 0px);
+  transition-delay: 0.4s;
+}
+
+.caption ul {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  text-decoration: none;
+  background: black;
+  color: white;
+  width: 100%;
+  padding: .85rem;
+  margin-bottom: 1rem;
+  align-self: center;
+  transition: all 0.45s;
+  transform: translateY(100px);
 }
 
-.discourse-link:link, 
-.discourse-link:visited {
-  color: black;
+.caption:hover ul {
+  transform: translateY(0px);
+  transition-delay: 0.5s;
 }
 
-.project-link {
-  font-size: 1rem;
+.caption ul a {
+  font-size: 1.08rem;
 }
 
-.project-link:hover {
+.caption ul a:hover {
   color: #12d300;
 }
 
-.project__card:hover .overflow, 
-.project__card img:active .overflow {
-  opacity: 100%;
-  transition: 0.6s ease-in-out;
-}
 
 /* About me */
 
@@ -631,14 +672,14 @@ section {
 }
 
 .contact-header--para {
-  font-size: 1rem;
+  font-size: 1.25rem;
   letter-spacing: 0.06rem;
   font-weight: 600;
 }
 
 
 .contact__form {
-  width: calc(22rem + 10vw);
+  width: calc(28rem + 10vw);
   display: flex;
   flex-direction: column;
   background-color: var(--tertiary-color);
@@ -686,7 +727,7 @@ input[type=submit] {
 
 /********************* MOBILE *************************/
 @media screen and (max-width: 610px) {
-
+  /***** NAV ********/
   #header {
     position: absolute;
   }
@@ -754,6 +795,8 @@ input[type=submit] {
     transform: rotateZ(405deg) translate(-0.8rem, -0.6rem)
   }
 
+  /********** SHOWCASE *********/
+
   #showcase {
     height: 100vh;
     background-image: url('images/CamFinal.png');
@@ -765,6 +808,8 @@ input[type=submit] {
     margin: 3.5rem;
   }
 
+  /********* CONTACT **********/
+
   #contact {
     justify-content: center;
   }
@@ -772,45 +817,6 @@ input[type=submit] {
   .contact__form {
     width: 22rem;
   }
-
-  /* #contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .contact__form {
-    flex-basis: 40rem;
-    width: calc(15rem + 20vw);
-    background-color: rgb(255, 255, 255);
-  }
-
-  .contact-header-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-bottom: 2rem;
-  }
-
-  .contact-header {
-    font-family: 'Roboto', sans-serif;
-    letter-spacing: 0.25rem;
-    color: black;
-    font-size: calc(2rem + 3vw);
-    align-self: center;
-    text-shadow: 2px 2px #12d300;
-  }
-
-  .contact-header--para {
-    font-size: 1rem;
-    letter-spacing: 0.06rem;
-    font-weight: 600;
-  }
-
-  .contact__form input {
-    height: 1rem;
-  } */
 
   .fa-linkedin {
     color: #006094;
@@ -830,6 +836,8 @@ input[type=submit] {
     font-size: 1.75rem;
   }
 
+  /******** ABOUT ME  *********/
+
   .about-me__content {
     padding: 1rem;
   }
@@ -838,6 +846,123 @@ input[type=submit] {
     font-size: 1.2rem;
     color: white;
   }
+
+  /********** PROJECTS  *********/
+  .project__card {
+    position: relative;
+    height: calc(13rem + 8vw);
+    width: calc(13rem + 8vw);
+    margin: 1rem;
+    overflow: hidden;
+    border: 3px solid black;
+    border-radius: 8px;
+    box-shadow: 4px 4px 5px -1px black;
+  }
+  
+  .project__card img {
+    flex-grow: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+  
+    transition: all 0.75s;
+  }
+  
+  .project__card:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150%;
+    height: 150%;
+    background-color: #2d3436;
+    opacity: 0.9;
+    transition: all 0.45s;
+    transform: translate(100%, 100%) rotate(0deg);
+  }
+  
+  .project__card:hover:before {
+    transform: translate(-55px, -45px) rotate(45deg);
+  }
+  
+  .caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: white;
+    text-transform: uppercase;
+  }
+  
+  .caption h2 {
+    text-align: center;
+    height: 25%;
+    padding: .25rem;
+    margin-top: 1.5rem;
+    background-color: rgb(0, 0, 0, 0.8);
+    transform: translate(275px, -150px);
+    transition: all 0.45s;
+  }
+  
+  .caption:hover h2 {
+    transform: translate(0px, 0px);
+  }
+  
+  .project__card:hover h2 {
+    transform: translate(0px, 0px);
+    transition-delay: 0.3s;
+  }
+  
+  .caption p {
+    width: 95%;
+    font-size: 1rem;
+    letter-spacing: 0.05rem;
+    align-self: center;
+    text-align: center;
+    transition: all 0.45s;
+    transform: translate(-200px, 200px)
+  }
+  
+  .caption:hover p {
+    transform: translate(0px, 0px);
+    transition-delay: 0.4s;
+  }
+  
+  .caption ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-decoration: none;
+    background: black;
+    color: white;
+    width: 100%;
+    padding: .35rem;
+    margin-bottom: 1rem;
+    align-self: center;
+    transition: all 0.45s;
+    transform: translateY(100px);
+  }
+  
+  .caption:hover ul {
+    transform: translateY(0px);
+    transition-delay: 0.5s;
+  }
+  
+  .caption ul a {
+    font-size: 1.08rem;
+  }
+  
+  .caption ul a:hover {
+    color: #12d300;
+  }
+
+  /********* FOOTER *******/
 
   #footer {
     margin-top: 2rem;

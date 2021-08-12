@@ -153,7 +153,8 @@ function MainNav(){
                             <a 
                                 offset={-110} 
                                 class="resume-select" 
-                                href="#"
+                                href="https://drive.google.com/file/d/18pKaJpt8NWqqjjjGffrsPGsrylz9QbzZ/view?usp=sharing"
+                                target="_blank"
                             > 
                                 Resume 
                             </a>
@@ -161,8 +162,7 @@ function MainNav(){
                     </ul>    
                 </nav>
             </header>
-
-            
+       
             <section id="showcase">
                 <div id="showcase__content">
                     <h1 class="showcase__content--title"> Cameron Bisca </h1>
@@ -184,7 +184,7 @@ function MainNav(){
                             <br/>
                             <br/>
                             
-                            Before discovering my love for development I studied acting at various conservatories. It was at those institutions where I became fascinated by relationships and the motives/objectives of individuals. 
+                            Before discovering my love for development I studied acting at various conservatories. It was at those institutions where I learned how to better connect with people and their objectives. 
 
                             <br/>
                             <br/>
@@ -204,33 +204,56 @@ function MainNav(){
                 <div id="projects">
                     <h1 class="section-headers"> My Work </h1>
                     <div class="project-list">
-                        <div className="project__card"> 
+                        <div class="project__card">
                             <img className="portfolio-image" src={i_got_next} alt="I Got Next project" />
 
-                            <div class="overflow"> 
-                                <div class="project-description-box">
-                                    <p class="project-description"> 
-                                        I GOT NEXT provides real time activity for basketball courts so users can find a court that fits their needs on a given day. 
-                                    </p>
-                                </div>
-                                <div class="project-links-box"> 
-                                    <span> 
-                                        <a class="project-link" href="https://github.com/cambisca/I-got-next-front"> Frontend </a> 
-                                    </span>
+                            <div class="caption">
+                                <h2> I GOT NEXT </h2>
+                                <p> I GOT NEXT provides real time activity for basketball courts. </p>
+                                <ul>
+                                    <a class="project-link" href="https://github.com/cambisca/I-got-next-front"> Frontend </a>
 
-                                    <span> 
-                                        <a class="project-link" href="https://github.com/cambisca/I-got-next-back"> Backend </a> 
-                                    </span>
+                                    <a class="project-link" href="https://github.com/cambisca/I-got-next-back"> Backend </a>
 
-                                    <span> 
-                                        <a class="project-link" href="https://www.loom.com/share/c0c70984952141d5805377f34aaedb1b"> Demo </a> 
-                                    </span>
-                                </div>
+                                    <a class="project-link" href="https://www.loom.com/share/c0c70984952141d5805377f34aaedb1b"> Demo </a>
+                                </ul>
                             </div>
-                           
                         </div>
 
-                        <div className="project__card">
+                        <div class="project__card">
+                            <img className="portfolio-image" src={discourse} alt="Discourse project"/>
+
+                            <div class="caption">
+                                <h2> Discourse </h2>
+                                <p> Chatting app that encourages meaningul discourse between people with differences. </p>
+                                <ul>
+                                    <a class="discourse-link project-link" href="https://github.com/jpersons24/discourse/tree/main/discourse-react"> Frontend </a>
+
+                                    <a class="discourse-link project-link" href="https://github.com/jpersons24/discourse-rails/tree/771dd677f37de567ac36dae6d9c704d1475992ce"> Backend </a>
+
+                                    <a class="discourse-link project-link" href="https://discourseapp.netlify.app/"> Site </a>
+                                </ul>
+                            </div>
+                        </div>
+                        {/* <div className="project__card"> 
+                            <img className="portfolio-image" src={i_got_next} alt="I Got Next project" />
+                            
+                            <p class="project-description"> 
+                                I GOT NEXT provides real time activity for basketball courts so users can find a court that fits their needs on a given day. 
+                            </p>
+                                
+                            <ul>
+                                <a class="project-link" href="https://github.com/cambisca/I-got-next-front"> Frontend </a> 
+
+                                <a class="project-link" href="https://github.com/cambisca/I-got-next-back"> Backend </a> 
+          
+                                <a class="project-link" href="https://www.loom.com/share/c0c70984952141d5805377f34aaedb1b"> Demo </a> 
+                                
+                            </ul>
+                           
+                        </div> */}
+
+                        {/* <div className="project__card">
                             <img className="portfolio-image" src={discourse} alt="Discourse project"/>
                             
                             <div class="overflow"> 
@@ -243,22 +266,21 @@ function MainNav(){
                                     <span> 
                                         <a class="discourse-link project-link" href="https://github.com/jpersons24/discourse/tree/main/discourse-react"> Frontend </a> 
                                     </span>
-                                    |
+                                    
                                     <span> 
                                         <a class="discourse-link project-link" href="https://github.com/jpersons24/discourse-rails/tree/771dd677f37de567ac36dae6d9c704d1475992ce"> Backend </a> 
                                     </span>
-                                    |
+                                    
                                     <span> 
                                         <a class="discourse-link project-link" href="https://discourseapp.netlify.app/"> Site </a> 
                                     </span>
                                 </div>
-                            </div>
+                            </div> */}
                             
-                        </div>
+                        
                     </div>
                 </div>
             </section>
-
             
             <section id="toolbox">
                 <h1 class="section-headers"> TOOL BOX </h1>
@@ -268,69 +290,7 @@ function MainNav(){
                     </div>
                 </div>
             </section>
-
-            {/* <section id="contact">
-                <div class="contact-header-box">
-                    <h1 class="section-headers"> Give me a shout </h1>
-                    <p class="contact-header--para"> Fill out the form and I'll get back to you ASAP! </p>
-                </div>
-
-                <form class="contact__form" onSubmit={handleSubmit(onSubmit)}>
-                <span class="success-message"> { visible ? successMessage : null } </span>
-                    <input 
-                        type="text" 
-                        placeholder="Name" 
-                        name="name"
-                        {
-                            ...register('name', { required: "Please enter your name" })
-                        }
-                    />
-                    <span class="error-message"> 
-                        {errors.name && errors.name.message} 
-                    </span> 
-                    
-                    <input 
-                        type="email" 
-                        placeholder="Email" 
-                        name="email"
-                        {...register("email", {
-                            required: "Please provide your email",
-                            pattern: {
-                              value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                              message: "Invalid email format",
-                            },
-                          })}
-                    />
-                    <span class="error-message"> 
-                        {errors.email && errors.email.message} 
-                    </span> 
-                    
-                    <input 
-                        type="text" 
-                        placeholder="Subject" 
-                        name="subject" 
-                        {
-                            ...register('subject', { required: "Please enter a subject" })
-                        }   
-                    />
-                    <span class="error-message"> 
-                        {errors.subject && errors.subject.message} 
-                    </span> 
-                    
-                    <textarea 
-                        type="message" 
-                        name="message"
-                        {
-                            ...register('message', { required: "Please enter your message " })
-                        }
-                    />
-                    <span class="error-message"> 
-                        {errors.message && errors.message.message} 
-                    </span> 
-                    
-                    <input type="submit" value="submit" />
-                </form> 
-            </section>*/}
+        
             <section id="contact">
                 <div class="contact-header-box">
                     <h1 class="section-headers"> Give me a shout </h1>
