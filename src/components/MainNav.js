@@ -347,7 +347,7 @@ function MainNav(){
                         {errors.message && errors.message.message} 
                     </span> 
 
-                    <input type="submit" value="submit" />
+                    <input type="submit" value="Submit" />
                 </form>
             </section>
 

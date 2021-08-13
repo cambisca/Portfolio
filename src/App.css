@@ -227,23 +227,7 @@ section {
   font-size: calc(1rem + 0.25vw);
 }
 
-/* .resume-select {
-  border: white solid 2px;
-  background-color: black;
-  color: white;
-  border-radius: 8px;
-  cursor: pointer;
-  height: 100%;
-  width: 100%;
-  padding: .5rem;
-  letter-spacing: .15rem;
-} */
 
-/* .resume-select:hover {
-  background-color: #12d300b5;
-  transition: all 0.3s ease-in-out;
-  
-} */
 
 .header-main-nav-links li a:link::before, 
 .header-main-nav-links li a:visited::before,
@@ -712,6 +696,7 @@ input[type=submit] {
   border: none;
   border-bottom: none;
   cursor: pointer;
+  color: black;
 }
 
 /****************** FOOTER **********************/
