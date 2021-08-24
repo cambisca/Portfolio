@@ -179,12 +179,17 @@ function MainNav(){
                     <div class="about-me__content">
                         <h2 class="about-me__content--title"> About Me </h2>
                         <p class="about-me__content--para"> 
-                            Yo! I'm Cameron but I usually go by Cam. I am a Brooklyn boy and software engineer with a passion for creative frontend development. 
+                            Yo! I'm Cameron but I usually go by Cam. I am a creative front end developer from Brooklyn NY who still resides in the city.  
                             
                             <br/>
                             <br/>
                             
-                            Before discovering my love for development I studied acting at various conservatories. It was at those institutions where I learned how to better connect with people and their objectives. 
+                            In 2021 I graduated from the fully immersive software engineering program at Flatiron school where I learned to build full stack web applications in React, JavaScript, Ruby on Rails, HTML and CSS. 
+                            
+                            <br/>
+                            <br/>
+                            
+                            Prior to discovering my passion for development I studied acting at various conservatories. It was at those institutions where I learned how to better connect with people and better understand their objectives. 
 
                             <br/>
                             <br/>
@@ -290,7 +295,7 @@ function MainNav(){
                     </div>
                 </div>
             </section>
-        
+         
             <section id="contact">
                 <div class="contact-header-box">
                     <h1 class="section-headers"> Give me a shout </h1>
