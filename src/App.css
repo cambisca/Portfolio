@@ -842,7 +842,7 @@ input[type=submit] {
     width: calc(13rem + 8vw);
     margin: 1rem;
     overflow: hidden;
-    border: 3px solid black;
+    /* border: 3px solid black; */
     border-radius: 8px;
     box-shadow: 4px 4px 5px -1px rgb(177, 177, 177);
   }

@@ -26,8 +26,13 @@ function ToolboxCarousel(){
             </>
 
             <>
+                <img class="tool-image" src="https://miro.medium.com/max/683/1*F9QwZsjxEcwZRD0CaKTBEQ.png" alt="Sass"></img>
+            </>
+
+            <>
                 <img class="tool-image" src="https://res.cloudinary.com/practicaldev/image/fetch/s--jvDLhx0b--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/cpcr5w0kgl6j94tss7n9.png" alt="Ruby on Rails"></img>
             </>
+
         </Carousel>
     )
 }
