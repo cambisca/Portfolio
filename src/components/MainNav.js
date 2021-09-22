@@ -153,7 +153,7 @@ function MainNav(){
                             <a 
                                 offset={-110} 
                                 class="resume-select" 
-                                href="https://drive.google.com/file/d/18pKaJpt8NWqqjjjGffrsPGsrylz9QbzZ/view?usp=sharing"
+                                href="https://docs.google.com/document/d/1l73pJszImDUpFMVL_QNyAoCdFa5h-5Yw-C971Jz2MN0/edit?usp=sharing"
                                 target="_blank"
                             > 
                                 Resume 
