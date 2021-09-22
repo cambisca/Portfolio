@@ -153,7 +153,7 @@ function MainNav(){
                             <a 
                                 offset={-110} 
                                 class="resume-select" 
-                                href="https://drive.google.com/drive/u/0/my-drive"
+                                href="https://drive.google.com/file/d/1IIndW2xSk4vE_XWfiEwRR0c071NkO21U/view"
                                 target="_blank"
                             > 
                                 Resume 
